@@ -295,7 +295,7 @@ footer{
 أؤمن أن التعليم ليس مجرد نقل معرفة، بل رسالة سامية لصناعة الأثر وبناء الإنسان. أطمح إلى أن أكون جزءًا فاعلًا في تطوير التعليم بالمملكة من خلال توظيف التقنيات الحديثة، وصناعة بيئات تعلم محفزة، تعزز التفكير النقدي والإبداعي، وتبني الثقة لدى الطالب. نظرتي المستقبلية تقوم على التعلم المستمر، وتطوير المهارات المهنية، ومواكبة التحولات الرقمية بما يخدم مخرجات التعليم وجودته في إطار رؤية المملكة 2030.
   </p>
 
-  <div class="badge" id="badge">🏆 حاصل على درجة متميزة في التخصص</div>
+  <div class="badge" id="badge">🏆 حاصل على درجة 95 في التخصص</div>
 
   <div class="stats">
     <div class="stat"><div class="num">14+</div><span id="stat1">سنوات خبرة</span></div>
@@ -335,7 +335,9 @@ footer{
 <section id="tech">
 <h2 class="section-title" id="techTitle">التقنية</h2>
 <div class="card">
-  <p id="techText">أواكب التقنيات التعليمية الحديثة، وأستخدم أدوات التعليم الرقمي، وتصميم الاختبارات الإلكترونية، وتوظيف الذكاء الاصطناعي في تحسين الأداء التعليمي.</p>
+  <p id="techText" style="line-height: 1.8; text-align: justify;">
+    أتمتع بشغف كبير تجاه التقنية والتعليم الرقمي، وأواكب أحدث التطورات في مجال الذكاء الاصطناعي وتطبيقاته التعليمية. أمتلك خبرة عملية في تصميم وتطوير أنشطة تفاعلية واختبارات إلكترونية باستخدام HTML وCSS وJavaScript، مما يثري تجربة التعلم ويجعلها أكثر تفاعلية وجاذبية للطلاب. أستخدم أدوات الذكاء الاصطناعي في تحليل أداء الطلاب وتصميم خطط تعليمية مخصصة، كما أصمم محتوى رقميًا مبتكرًا يتناسب مع احتياجات التعلم الحديثة. أسعى دائمًا لدمج التقنية في العملية التعليمية بطرق إبداعية تواكب متطلبات العصر الرقمي وتخدم أهداف رؤية المملكة 2030.
+  </p>
 </div>
 </section>
 
@@ -370,7 +372,7 @@ const translations = {
     name: "فهد نغيمش حميد الخالدي",
     jobTitle: "معلم متقدم – تخصص اللغة الإنجليزية",
     bioText: "أؤمن أن التعليم ليس مجرد نقل معرفة، بل رسالة سامية لصناعة الأثر وبناء الإنسان. أطمح إلى أن أكون جزءًا فاعلًا في تطوير التعليم بالمملكة من خلال توظيف التقنيات الحديثة، وصناعة بيئات تعلم محفزة، تعزز التفكير النقدي والإبداعي، وتبني الثقة لدى الطالب. نظرتي المستقبلية تقوم على التعلم المستمر، وتطوير المهارات المهنية، ومواكبة التحولات الرقمية بما يخدم مخرجات التعليم وجودته في إطار رؤية المملكة 2030.",
-    badge: "🏆 حاصل على درجة متميزة في التخصص",
+    badge: "🏆 حاصل على درجة 95 في التخصص",
     stat1: "سنوات خبرة",
     stat2: "ساعات تدريبية",
     stat3: "مدن تعليمية",
@@ -405,7 +407,7 @@ const translations = {
       "التوعية بقواعد السلوك والمواظبة المحدثة",
       "اللقاءات التخصصية لمادة اللغة الإنجليزية"
     ],
-    techText: "أواكب التقنيات التعليمية الحديثة، وأستخدم أدوات التعليم الرقمي، وتصميم الاختبارات الإلكترونية، وتوظيف الذكاء الاصطناعي في تحسين الأداء التعليمي.",
+    techText: "أتمتع بشغف كبير تجاه التقنية والتعليم الرقمي، وأواكب أحدث التطورات في مجال الذكاء الاصطناعي وتطبيقاته التعليمية. أمتلك خبرة عملية في تصميم وتطوير أنشطة تفاعلية واختبارات إلكترونية باستخدام HTML وCSS وJavaScript، مما يثري تجربة التعلم ويجعلها أكثر تفاعلية وجاذبية للطلاب. أستخدم أدوات الذكاء الاصطناعي في تحليل أداء الطلاب وتصميم خطط تعليمية مخصصة، كما أصمم محتوى رقميًا مبتكرًا يتناسب مع احتياجات التعلم الحديثة. أسعى دائمًا لدمج التقنية في العملية التعليمية بطرق إبداعية تواكب متطلبات العصر الرقمي وتخدم أهداف رؤية المملكة 2030.",
     contactText: "📧 iFahadenglish@gmail.com<br>📱 +9665554449824",
     footerText: "© جميع الحقوق محفوظة - فهد الخالدي"
   },
@@ -426,7 +428,7 @@ const translations = {
     name: "Fahad Naghimish Hamid AlKhaldi",
     jobTitle: "Senior English Teacher",
     bioText: "I believe that education is not merely about transferring knowledge, but a noble mission to make an impact and build individuals. I aspire to be an active part in developing education in the Kingdom by employing modern technologies, creating stimulating learning environments that enhance critical and creative thinking, and building student confidence. My future vision is based on continuous learning, developing professional skills, and keeping pace with digital transformations that serve educational outcomes and quality within the framework of Saudi Vision 2030.",
-    badge: "🏆 Achieved an excellent grade in specialization",
+    badge: "🏆 Achieved a score of 95 in specialization",
     stat1: "Years of Experience",
     stat2: "Training Hours",
     stat3: "Education Cities",
@@ -461,7 +463,7 @@ const translations = {
       "Awareness of Updated Behavior and Attendance Rules",
       "Specialized English Subject Meetings"
     ],
-    techText: "I keep up with modern educational technologies, use digital education tools, design electronic tests, and employ artificial intelligence in improving educational performance.",
+    techText: "I have a great passion for technology and digital education, and I keep up with the latest developments in the field of artificial intelligence and its educational applications. I have practical experience in designing and developing interactive activities and electronic tests using HTML, CSS, and JavaScript, which enriches the learning experience and makes it more interactive and attractive for students. I use AI tools to analyze student performance and design customized educational plans, and I also design innovative digital content that suits modern learning needs. I always strive to integrate technology into the educational process in creative ways that keep pace with the requirements of the digital age and serve the goals of Saudi Vision 2030.",
     contactText: "📧 iFahadenglish@gmail.com<br>📱 +9665554449824",
     footerText: "© All Rights Reserved - Fahad AlKhaldi"
   }
