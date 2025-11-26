@@ -1,7 +1,4 @@
-            box-shadow: var(--shadow);
-            padding: 30px;
-            overflow: hidden;
-        }
+
         <د
 <html lang="ar" dir="rtl">
 <head>
