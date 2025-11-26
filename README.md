@@ -127,7 +127,7 @@ nav{
   height: 30px;
 }
 
-main{max-width:1100px;margin:auto;padding:20px}
+main{max-width:10000px;margin:auto;padding:0px}
 section{display:none; animation: fadeIn 0.5s ease;}
 section.active{display:block}
 .section-title{
