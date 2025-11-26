@@ -1,24 +1,27 @@
-
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الملف المهني | فهد الخالدي</title>
-
+<!-- إضافة خطوط عربية جميلة -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --primary:#1a365d;
   --accent:#2563eb;
   --bg:#f5f7fa;
+  --text:#1e293b;
+  --light-text:#64748b;
 }
-*{box-sizing:border-box;font-family:Tahoma,Arial}
+*{box-sizing:border-box;font-family:'Tajawal', Tahoma, Arial, sans-serif}
 
 body{
   margin:0;
   background:var(--bg);
-  color:#0f172a;
+  color:var(--text);
   padding-right:90px;
   transition: padding 0.3s ease;
+  line-height: 1.7;
 }
 
 header{
@@ -26,13 +29,16 @@ header{
   color:#fff;
   text-align:center;
   padding:14px;
+  position: relative;
+  z-index: 1000;
 }
 #pageTitle{
-  font-size:.82rem;
+  font-size:1.4rem;
   background:rgba(255,255,255,.15);
-  padding:4px 14px;
+  padding:8px 20px;
   border-radius:999px;
   display:inline-block;
+  font-weight:700;
 }
 
 .lang-btn{
@@ -42,12 +48,14 @@ header{
   background:#fff;
   color:var(--accent);
   border:none;
-  padding:6px 12px;
+  padding:8px 16px;
   border-radius:8px;
   font-weight:bold;
   cursor:pointer;
   z-index:3000;
   transition: all 0.2s ease;
+  font-family: 'Tajawal', sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .lang-btn:hover {
@@ -66,12 +74,15 @@ nav{
   border-left:1px solid #ddd;
   z-index:2000;
   transition: all 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .nav-container{
   display:flex;
   flex-direction:column;
   align-items:center;
   padding-top:90px;
+  padding-bottom: 30px;
   gap:14px;
 }
 .nav-link{
@@ -89,6 +100,7 @@ nav{
   align-items:center;
   cursor:pointer;
   transition: all 0.2s ease;
+  position: relative;
 }
 .nav-link svg{width:20px;height:20px;fill:currentColor}
 .nav-link.active,
@@ -98,67 +110,132 @@ nav{
   transform: translateX(-2px);
 }
 
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}
+
+.nav-link.active::after {
+  height: 30px;
+}
+
 main{max-width:1100px;margin:auto;padding:20px}
 section{display:none; animation: fadeIn 0.5s ease;}
 section.active{display:block}
-.section-title{text-align:center;color:var(--primary); margin-bottom: 20px;}
+.section-title{
+  text-align:center;
+  color:var(--primary); 
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+}
 
 .card{
   background:#fff;
-  border-radius:14px;
-  padding:18px;
-  margin-bottom:18px;
+  border-radius:16px;
+  padding:25px;
+  margin-bottom:25px;
   box-shadow:0 6px 18px rgba(0,0,0,.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-right: 4px solid transparent;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,.1);
+  border-right-color: var(--accent);
 }
 
 .profile-img{
-  width:130px;height:130px;
-  margin:10px auto;
+  width:150px;
+  height:150px;
+  margin:15px auto;
   border-radius:50%;
   overflow:hidden;
-  border:3px solid var(--accent);
+  border:4px solid var(--accent);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
 }
-.profile-img img{width:100%;height:100%;object-fit:cover}
+.profile-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-.bio{text-align:justify;font-size:.95rem; line-height: 1.7;}
+.bio{
+  text-align:justify;
+  font-size:0.80rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 15px 0;
+}
 
 .badge{
-  margin:10px auto;
+  margin:15px auto;
   text-align:center;
-  background:#16a34a;
+  background:linear-gradient(135deg, #16a34a, #059669);
   color:white;
-  padding:6px 18px;
+  padding:8px 20px;
   border-radius:999px;
-  font-size:12px;
+  font-size:14px;
   display:inline-flex;
-  gap:6px;
+  gap:8px;
   align-items:center;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
 }
 
 .stats{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-  gap:10px;
-  margin-top:12px;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:15px;
+  margin-top:20px;
 }
 .stat{
-  background:#f1f5f9;
-  padding:10px;
-  border-radius:10px;
+  background:#f8fafc;
+  padding:15px;
+  border-radius:12px;
   text-align:center;
   transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
 }
 .stat:hover {
-  background: #e2e8f0;
-  transform: translateY(-3px);
+  background: #f1f5f9;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,.08);
 }
-.stat .num{color:var(--accent);font-weight:bold; font-size: 1.2rem;}
+.stat .num{
+  color:var(--accent);
+  font-weight:800;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.stat span {
+  font-weight: 600;
+  color: var(--light-text);
+  font-size: 0.9rem;
+}
 
 /* Timeline */
 .timeline{
@@ -166,25 +243,27 @@ section.active{display:block}
   flex-direction:column-reverse;
   position:relative;
   padding-right:30px;
-  gap:14px;
+  gap:18px;
 }
 .timeline::before{
   content:"";
   position:absolute;
-  right:10px;
+  right:15px;
   top:0;
   bottom:0;
   width:4px;
   background:var(--accent);
+  border-radius: 4px;
 }
 .timeline-item{
   background:white;
-  border-radius:12px;
-  padding:12px;
-  margin-right:28px;
+  border-radius:14px;
+  padding:18px;
+  margin-right:35px;
   box-shadow:0 4px 12px rgba(0,0,0,.08);
   position:relative;
   transition: all 0.3s ease;
+  border-right: 3px solid var(--accent);
 }
 .timeline-item:hover {
   transform: translateX(-5px);
@@ -193,21 +272,134 @@ section.active{display:block}
 .timeline-item::after{
   content:"";
   position:absolute;
-  right:-25px;
-  top:18px;
-  width:14px;
-  height:14px;
+  right:-32px;
+  top:22px;
+  width:18px;
+  height:18px;
   background:var(--accent);
   border-radius:50%;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
 }
-.timeline-date{color:var(--accent);font-weight:bold}
+.timeline-date{
+  color:var(--accent);
+  font-weight:700;
+  font-size: 0.80rem;
+  margin-bottom: 8px;
+}
+.timeline-item div {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-size: 0.80rem;
+}
+.timeline-item div:last-child {
+  color: var(--light-text);
+  font-weight: 500;
+  font-size: 0.80rem;
+}
+
+/* Achievements */
+.achievement-card {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border-right: 4px solid var(--accent);
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.3)"/></svg>');
+  background-size: cover;
+}
+
+.achievement-year {
+  background: var(--accent);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 0.80rem;
+}
+
+.achievement-content {
+  position: relative;
+  z-index: 1;
+}
+
+.achievement-content p {
+  line-height: 1.8;
+  text-align: justify;
+  font-size: 0.80rem;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Skills & Training Lists - Updated colors */
+.skills-card, .training-card {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border-right: 4px solid var(--accent);
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.tech-card {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border-right: 4px solid var(--accent);
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border-right: 4px solid var(--accent);
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ul {
+  padding-right: 20px;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  position: relative;
+  padding-right: 15px;
+  font-size: 0.80rem;
+}
+
+li::before {
+  content: "•";
+  color: var(--accent);
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+}
 
 footer{
   background:var(--primary);
   color:white;
   text-align:center;
-  padding:16px;
-  margin-top:30px;
+  padding:20px;
+  margin-top:40px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.80rem;
 }
 
 /* Animation */
@@ -235,9 +427,49 @@ footer{
   .lang-btn {
     top: 5px;
     left: 5px;
-    padding: 4px 8px;
+    padding: 6px 12px;
     font-size: 0.8rem;
   }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .nav-link::after {
+    left: -6px;
+    width: 3px;
+  }
+  
+  .nav-link.active::after {
+    height: 25px;
+  }
+}
+
+/* Scrollbar styling for nav */
+nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+nav::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
 }
 </style>
 </head>
@@ -259,6 +491,11 @@ footer{
     <div class="nav-link" data-section="experience">
       <svg viewBox="0 0 24 24"><path d="M20 6h-4V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Z"/></svg>
       <span id="navExp">الخبرات</span>
+    </div>
+    <div class="nav-link" data-section="achievements">
+      <!-- Updated achievement icon -->
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8Z"/><path d="m14.8 10.4-2.2 2.2-1.4-1.4-1.4 1.4 2.8 2.8 3.6-3.6Z"/></svg>
+      <span id="navAchievements">الإنجازات</span>
     </div>
     <div class="nav-link" data-section="skills">
       <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21Z"/></svg>
@@ -288,8 +525,8 @@ footer{
     <img src="https://i.ibb.co/k66psVmZ/20220817-151032.jpg" alt="صورة فهد الخالدي">
   </div>
 
-  <h3 id="name">فهد نغيمش حميد الخالدي</h3>
-  <p><b id="jobTitle">معلم متقدم – تخصص اللغة الإنجليزية</b></p>
+  <h3 id="name" style="font-size: 1rem; margin-bottom: 8px; color: var(--primary);">فهد نغيمش حميد الخالدي</h3>
+  <p style="font-size: 0.80rem; margin-bottom: 15px;"><b id="jobTitle">معلم متقدم – تخصص اللغة الإنجليزية</b></p>
 
   <p class="bio" id="bioText">
 أؤمن أن التعليم ليس مجرد نقل معرفة، بل رسالة سامية لصناعة الأثر وبناء الإنسان. أطمح إلى أن أكون جزءًا فاعلًا في تطوير التعليم بالمملكة من خلال توظيف التقنيات الحديثة، وصناعة بيئات تعلم محفزة، تعزز التفكير النقدي والإبداعي، وتبني الثقة لدى الطالب. نظرتي المستقبلية تقوم على التعلم المستمر، وتطوير المهارات المهنية، ومواكبة التحولات الرقمية بما يخدم مخرجات التعليم وجودته في إطار رؤية المملكة 2030.
@@ -314,9 +551,27 @@ footer{
 </div>
 </section>
 
+<section id="achievements">
+<h2 class="section-title" id="achievementsTitle">الإنجازات</h2>
+<div class="card">
+  <div class="achievement-card">
+    <div class="achievement-year">2022</div>
+    <div class="achievement-content">
+      <p id="achievementText">
+        في عام 2022 حصلتُ على ترقية إلى رتبة معلم متقدم بعد مسيرة مهنية امتدت لسنوات كمعلم ممارس، قدمت خلالها أداءً متميزًا أسهم في تطوير العملية التعليمية داخل المدرسة. جاءت هذه الترقية تقديرًا لجهودي في توظيف استراتيجيات تدريس حديثة تعزز مهارات التفكير النقدي والإبداعي لدى الطلاب، إضافة إلى قدرتي على تحليل نواتج التعلم وبناء خطط علاجية فردية أثمرت عن تحسين واضح في مستويات الطلاب.<br><br>
+
+        وقد عكست هذه الترقية ثقة الجهة التعليمية بمهاراتي المهنية، خصوصًا في مجال تصميم أنشطة مبتكرة تُدمج مهارات الفهم العميق، والعمل التعاوني، والتعليم الذاتي داخل البيئة الصفية. كما كانت اعترافًا بدوري في تطوير البرامج التربوية والأنشطة التعليمية قبل عام 2022، ومساهمتي في بناء بيئة صفية محفزة يشعر فيها الطلاب بالأمان والرغبة في المشاركة والتعلم.<br><br>
+
+        تعد هذه الترقية محطة مهمة في مسيرتي، لأنها لم تكن مجرد انتقال إلى مستوى وظيفي أعلى، بل كانت نتيجة تراكم خبرات وممارسات مهنية أثبتت أثرها على الطلاب وعلى منظومة التعليم داخل المدرسة. واليوم أواصل عملي كمعلم متقدم ملتزم بالتحسين المستمر، وتطبيق أفضل الممارسات التربوية، والمساهمة في رفع جودة التعليم وتحقيق نواتج تعلم أعلى.
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
 <section id="skills">
 <h2 class="section-title" id="skillsTitle">المهارات</h2>
-<div class="card">
+<div class="skills-card">
   <ul id="skillsList">
     <!-- سيتم ملؤها ديناميكياً -->
   </ul>
@@ -325,7 +580,7 @@ footer{
 
 <section id="training">
 <h2 class="section-title" id="trainingTitle">الدورات التدريبية</h2>
-<div class="card">
+<div class="training-card">
   <ul id="trainingList">
     <!-- سيتم ملؤها ديناميكياً -->
   </ul>
@@ -334,8 +589,8 @@ footer{
 
 <section id="tech">
 <h2 class="section-title" id="techTitle">التقنية</h2>
-<div class="card">
-  <p id="techText" style="line-height: 1.8; text-align: justify;">
+<div class="tech-card">
+  <p id="techText" style="line-height: 1.8; text-align: justify; margin: 0; font-size: 0.80rem;">
     أتمتع بشغف كبير تجاه التقنية والتعليم الرقمي، وأواكب أحدث التطورات في مجال الذكاء الاصطناعي وتطبيقاته التعليمية. أمتلك خبرة عملية في تصميم وتطوير أنشطة تفاعلية واختبارات إلكترونية باستخدام HTML وCSS وJavaScript، مما يثري تجربة التعلم ويجعلها أكثر تفاعلية وجاذبية للطلاب. أستخدم أدوات الذكاء الاصطناعي في تحليل أداء الطلاب وتصميم خطط تعليمية مخصصة، كما أصمم محتوى رقميًا مبتكرًا يتناسب مع احتياجات التعلم الحديثة. أسعى دائمًا لدمج التقنية في العملية التعليمية بطرق إبداعية تواكب متطلبات العصر الرقمي وتخدم أهداف رؤية المملكة 2030.
   </p>
 </div>
@@ -343,8 +598,8 @@ footer{
 
 <section id="contact">
 <h2 class="section-title" id="contactTitle">تواصل</h2>
-<div class="card" style="text-align:center">
-  <p id="contactText">📧 iFahadenglish@gmail.com<br>📱 +9665554449824</p>
+<div class="contact-card">
+  <p id="contactText" style="font-size: 0.80rem; line-height: 1.8; margin: 0;">📧 iFahadenglish@gmail.com<br>📱 +9665554449824</p>
 </div>
 </section>
 
@@ -359,12 +614,14 @@ const translations = {
     pageTitle: "الملف المهني للمعلم فهد الخالدي",
     navAbout: "نبذة عني",
     navExp: "الخبرات",
+    navAchievements: "الإنجازات",
     navSkills: "المهارات",
     navTrain: "الدورات",
     navTech: "التقنية",
     navContact: "تواصل",
     aboutTitle: "نبذة عني",
     experienceTitle: "الخبرات",
+    achievementsTitle: "الإنجازات",
     skillsTitle: "المهارات",
     trainingTitle: "الدورات التدريبية",
     techTitle: "التقنية",
@@ -376,6 +633,7 @@ const translations = {
     stat1: "سنوات خبرة",
     stat2: "ساعات تدريبية",
     stat3: "مدن تعليمية",
+    achievementText: "في عام 2022 حصلتُ على ترقية إلى رتبة معلم متقدم بعد مسيرة مهنية امتدت لسنوات كمعلم ممارس، قدمت خلالها أداءً متميزًا أسهم في تطوير العملية التعليمية داخل المدرسة. جاءت هذه الترقية تقديرًا لجهودي في توظيف استراتيجيات تدريس حديثة تعزز مهارات التفكير النقدي والإبداعي لدى الطلاب، إضافة إلى قدرتي على تحليل نواتج التعلم وبناء خطط علاجية فردية أثمرت عن تحسين واضح في مستويات الطلاب.<br><br>وقد عكست هذه الترقية ثقة الجهة التعليمية بمهاراتي المهنية، خصوصًا في مجال تصميم أنشطة مبتكرة تُدمج مهارات الفهم العميق، والعمل التعاوني، والتعليم الذاتي داخل البيئة الصفية. كما كانت اعترافًا بدوري في تطوير البرامج التربوية والأنشطة التعليمية قبل عام 2022، ومساهمتي في بناء بيئة صفية محفزة يشعر فيها الطلاب بالأمان والرغبة في المشاركة والتعلم.<br><br>تعد هذه الترقية محطة مهمة في مسيرتي، لأنها لم تكن مجرد انتقال إلى مستوى وظيفي أعلى، بل كانت نتيجة تراكم خبرات وممارسات مهنية أثبتت أثرها على الطلاب وعلى منظومة التعليم داخل المدرسة. واليوم أواصل عملي كمعلم متقدم ملتزم بالتحسين المستمر، وتطبيق أفضل الممارسات التربوية، والمساهمة في رفع جودة التعليم وتحقيق نواتج تعلم أعلى.",
     experiences: [
       {date: "2011 - 2012", title: "مترجم – وزارة الحج والعمرة", location: "مكة المكرمة"},
       {date: "2012 - 2014", title: "معلم لغة إنجليزية – سعيد بن زيد", location: "عفيف"},
@@ -415,23 +673,26 @@ const translations = {
     pageTitle: "Professional Portfolio - Fahad AlKhaldi",
     navAbout: "About Me",
     navExp: "Experience",
+    navAchievements: "Achievements",
     navSkills: "Skills",
     navTrain: "Training",
     navTech: "Technology",
     navContact: "Contact",
     aboutTitle: "About Me",
     experienceTitle: "Professional Experience",
+    achievementsTitle: "Achievements",
     skillsTitle: "Skills",
     trainingTitle: "Training Courses",
     techTitle: "Technology",
     contactTitle: "Contact",
-    name: "Fahad Naghimish Hamid AlKhaldi",
-    jobTitle: "Senior English Teacher",
+    name: "Fahad Nughaimesh Humaid AlKhaldi",
+    jobTitle: "Advanced English Teacher",
     bioText: "I believe that education is not merely about transferring knowledge, but a noble mission to make an impact and build individuals. I aspire to be an active part in developing education in the Kingdom by employing modern technologies, creating stimulating learning environments that enhance critical and creative thinking, and building student confidence. My future vision is based on continuous learning, developing professional skills, and keeping pace with digital transformations that serve educational outcomes and quality within the framework of Saudi Vision 2030.",
     badge: "🏆 Achieved a score of 95 in specialization",
     stat1: "Years of Experience",
     stat2: "Training Hours",
     stat3: "Education Cities",
+    achievementText: "In 2022, I was promoted to the rank of Advanced Teacher after a professional career spanning years as a practicing teacher, during which I provided outstanding performance that contributed to the development of the educational process within the school. This promotion came in recognition of my efforts in employing modern teaching strategies that enhance students' critical and creative thinking skills, in addition to my ability to analyze learning outcomes and build individual remedial plans that resulted in a clear improvement in student levels.<br><br>This promotion reflected the educational authority's confidence in my professional skills, especially in designing innovative activities that integrate deep understanding skills, collaborative work, and self-learning within the classroom environment. It was also an acknowledgment of my role in developing educational programs and activities before 2022, and my contribution to building a stimulating classroom environment where students feel safe and eager to participate and learn.<br><br>This promotion is an important milestone in my career, as it was not just a transition to a higher functional level, but rather the result of accumulated experiences and professional practices that proved their impact on students and the educational system within the school. Today, I continue my work as a senior teacher committed to continuous improvement, applying the best educational practices, and contributing to raising the quality of education and achieving higher learning outcomes.",
     experiences: [
       {date: "2011 - 2012", title: "Translator - Ministry of Hajj and Umrah", location: "Makkah"},
       {date: "2012 - 2014", title: "English Teacher - Saeed Bin Zaid", location: "Afif"},
@@ -476,12 +737,14 @@ const langBtn = document.getElementById('langBtn');
 const pageTitle = document.getElementById('pageTitle');
 const navAbout = document.getElementById('navAbout');
 const navExp = document.getElementById('navExp');
+const navAchievements = document.getElementById('navAchievements');
 const navSkills = document.getElementById('navSkills');
 const navTrain = document.getElementById('navTrain');
 const navTech = document.getElementById('navTech');
 const navContact = document.getElementById('navContact');
 const aboutTitle = document.getElementById('aboutTitle');
 const experienceTitle = document.getElementById('experienceTitle');
+const achievementsTitle = document.getElementById('achievementsTitle');
 const skillsTitle = document.getElementById('skillsTitle');
 const trainingTitle = document.getElementById('trainingTitle');
 const techTitle = document.getElementById('techTitle');
@@ -493,6 +756,7 @@ const badge = document.getElementById('badge');
 const stat1 = document.getElementById('stat1');
 const stat2 = document.getElementById('stat2');
 const stat3 = document.getElementById('stat3');
+const achievementText = document.getElementById('achievementText');
 const timeline = document.getElementById('timeline');
 const skillsList = document.getElementById('skillsList');
 const trainingList = document.getElementById('trainingList');
@@ -508,12 +772,14 @@ function loadLanguage(lang) {
   pageTitle.textContent = t.pageTitle;
   navAbout.textContent = t.navAbout;
   navExp.textContent = t.navExp;
+  navAchievements.textContent = t.navAchievements;
   navSkills.textContent = t.navSkills;
   navTrain.textContent = t.navTrain;
   navTech.textContent = t.navTech;
   navContact.textContent = t.navContact;
   aboutTitle.textContent = t.aboutTitle;
   experienceTitle.textContent = t.experienceTitle;
+  achievementsTitle.textContent = t.achievementsTitle;
   skillsTitle.textContent = t.skillsTitle;
   trainingTitle.textContent = t.trainingTitle;
   techTitle.textContent = t.techTitle;
@@ -525,6 +791,7 @@ function loadLanguage(lang) {
   stat1.textContent = t.stat1;
   stat2.textContent = t.stat2;
   stat3.textContent = t.stat3;
+  achievementText.innerHTML = t.achievementText;
   techText.textContent = t.techText;
   contactText.innerHTML = t.contactText;
   footerText.textContent = t.footerText;
@@ -536,7 +803,8 @@ function loadLanguage(lang) {
     item.className = 'timeline-item';
     item.innerHTML = `
       <div class="timeline-date">${exp.date}</div>
-      ${exp.title}<br>${exp.location}
+      <div>${exp.title}</div>
+      <div>${exp.location}</div>
     `;
     timeline.appendChild(item);
   });
@@ -581,18 +849,40 @@ langBtn.addEventListener('click', () => {
   currentLang = currentLang === 'ar' ? 'en' : 'ar';
   loadLanguage(currentLang);
   langBtn.textContent = currentLang === 'ar' ? 'EN' : 'AR';
+  langBtn.setAttribute('aria-label', currentLang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
 });
 
 // التنقل بين الأقسام
 document.querySelectorAll(".nav-link").forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    // إزالة النشط من جميع الروابط
     document.querySelectorAll(".nav-link").forEach(n => n.classList.remove("active"));
-    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    
+    // إضافة النشط للرابط المحدد
     link.classList.add("active");
-    document.getElementById(link.dataset.section).classList.add("active");
+    
+    // إخفاء جميع الأقسام
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    
+    // إظهار القسم المحدد
+    const targetSection = link.getAttribute('data-section');
+    document.getElementById(targetSection).classList.add("active");
     
     // إضافة تأثير التمرير السلس
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// تحسين إمكانية الوصول للتنقل
+document.querySelectorAll(".nav-link").forEach((el) => {
+  el.tabIndex = 0;
+  el.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      el.click();
+    }
   });
 });
 
