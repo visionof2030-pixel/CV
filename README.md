@@ -9,10 +9,13 @@
         :root {
             --primary: #1a365d;
             --secondary: #2d3748;
-            --accent: #3182ce;
+            --accent: #e53e3e;
             --light: #f7fafc;
             --dark: #2d3748;
             --success: #38a169;
+            --nav-bg: #2c5282;
+            --text-light: #f7fafc;
+            --text-dark: #2d3748;
         }
         
         * {
@@ -26,7 +29,8 @@
             background-color: #f5f7fa;
             color: var(--dark);
             line-height: 1.8;
-            font-size: 1.4rem; /* زيادة حجم الخط الأساسي */
+            font-size: 1.4rem;
+            padding-top: 80px; /* إضافة مساحة لأعلى الصفحة لتعويض شريط التنقل الثابت */
         }
         
         .container {
@@ -37,12 +41,15 @@
         
         /* Navigation */
         nav {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
+            background: var(--nav-bg);
+            color: var(--text-light);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
+            position: fixed;
             top: 0;
+            right: 0;
+            left: 0;
             z-index: 100;
+            padding: 0.5rem 0;
         }
         
         .nav-container {
@@ -52,23 +59,23 @@
         }
         
         .nav-link {
-            padding: 1.2rem 1.8rem;
+            padding: 1rem 1.5rem;
             text-decoration: none;
-            color: white;
+            color: var(--text-light);
             font-weight: 500;
             transition: all 0.3s ease;
             border-bottom: 3px solid transparent;
-            font-size: 1.3rem; /* زيادة حجم خط التنقل */
+            font-size: 1.3rem;
         }
         
         .nav-link:hover, .nav-link.active {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-bottom: 3px solid white;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-bottom: 3px solid var(--accent);
         }
         
         /* Section Styles */
         section {
-            padding: 4rem 0;
+            padding: 3rem 0;
             display: none;
         }
         
@@ -81,7 +88,7 @@
             margin-bottom: 3rem;
             color: var(--primary);
             position: relative;
-            font-size: 2.8rem; /* زيادة كبيرة في حجم عناوين الأقسام */
+            font-size: 2.8rem;
         }
         
         .section-title::after {
@@ -113,7 +120,7 @@
             margin-bottom: 1.5rem;
             padding-bottom: 0.8rem;
             border-bottom: 3px solid #e2e8f0;
-            font-size: 2.2rem; /* زيادة حجم عناوين البطاقات */
+            font-size: 2.2rem;
         }
         
         /* About Section */
@@ -158,14 +165,14 @@
         }
         
         .profile-name {
-            font-size: 2.5rem; /* زيادة كبيرة في حجم الاسم */
+            font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 0.8rem;
             font-weight: bold;
         }
         
         .profile-title {
-            font-size: 1.8rem; /* زيادة في حجم اللقب الوظيفي */
+            font-size: 1.8rem;
             color: var(--accent);
             margin-bottom: 1.5rem;
             font-weight: 500;
@@ -177,7 +184,7 @@
         }
         
         .intro-text {
-            font-size: 1.6rem; /* زيادة كبيرة في حجم نص المقدمة */
+            font-size: 1.6rem;
             line-height: 1.9;
             margin-bottom: 2.5rem;
             text-align: justify;
@@ -199,7 +206,7 @@
         }
         
         .stat-number {
-            font-size: 3.5rem; /* زيادة كبيرة في حجم الأرقام */
+            font-size: 3.5rem;
             font-weight: bold;
             color: var(--accent);
             display: block;
@@ -208,7 +215,7 @@
         .stat-label {
             color: var(--secondary);
             font-weight: 500;
-            font-size: 1.5rem; /* زيادة في حجم تسمية الإحصائيات */
+            font-size: 1.5rem;
         }
         
         /* Experience Section */
@@ -250,7 +257,7 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             position: relative;
-            font-size: 1.5rem; /* زيادة في حجم نص الخبرات */
+            font-size: 1.5rem;
         }
         
         .timeline-content::before {
@@ -275,11 +282,11 @@
             color: var(--accent);
             font-weight: bold;
             margin-bottom: 0.8rem;
-            font-size: 1.7rem; /* زيادة في حجم تاريخ الخبرة */
+            font-size: 1.7rem;
         }
         
         .timeline-content h3 {
-            font-size: 1.9rem; /* زيادة في حجم عنوان الخبرة */
+            font-size: 1.9rem;
             margin-bottom: 0.8rem;
         }
         
@@ -307,7 +314,7 @@
         .skill-category h3 {
             margin-bottom: 2rem;
             color: var(--primary);
-            font-size: 2.2rem; /* زيادة في حجم عناوين المهارات */
+            font-size: 2.2rem;
         }
         
         .skill-item {
@@ -318,7 +325,7 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 0.8rem;
-            font-size: 1.6rem; /* زيادة في حجم أسماء المهارات */
+            font-size: 1.6rem;
         }
         
         .skill-bar {
@@ -352,12 +359,12 @@
         .course-card h4 {
             color: var(--primary);
             margin-bottom: 1rem;
-            font-size: 1.8rem; /* زيادة في حجم عناوين الدورات */
+            font-size: 1.8rem;
         }
         
         .course-card p {
             color: var(--secondary);
-            font-size: 1.5rem; /* زيادة في حجم وصف الدورات */
+            font-size: 1.5rem;
         }
         
         /* Contact Section */
@@ -388,7 +395,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.8rem; /* زيادة في حجم أيقونات التواصل */
+            font-size: 1.8rem;
         }
         
         .contact-form {
@@ -399,7 +406,7 @@
         }
         
         .contact-form h3 {
-            font-size: 2.2rem; /* زيادة في حجم عنوان نموذج التواصل */
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
         }
         
@@ -411,7 +418,7 @@
             display: block;
             margin-bottom: 0.8rem;
             font-weight: 500;
-            font-size: 1.6rem; /* زيادة في حجم تسميات النموذج */
+            font-size: 1.6rem;
         }
         
         .form-control {
@@ -419,7 +426,7 @@
             padding: 1rem;
             border: 2px solid #e2e8f0;
             border-radius: 8px;
-            font-size: 1.5rem; /* زيادة في حجم نص النموذج */
+            font-size: 1.5rem;
             transition: border 0.3s ease;
         }
         
@@ -435,80 +442,21 @@
             padding: 1.2rem 2.5rem;
             border: none;
             border-radius: 8px;
-            font-size: 1.6rem; /* زيادة في حجم نص الزر */
+            font-size: 1.6rem;
             font-weight: 500;
             cursor: pointer;
             transition: background 0.3s ease;
         }
         
         .btn:hover {
-            background: var(--primary);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
-            padding: 2.5rem 0;
-            text-align: center;
-            font-size: 1.5rem; /* زيادة في حجم نص الفوتر */
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .social-link {
-            width: 55px;
-            height: 55px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: background 0.3s ease;
-            font-size: 1.5rem; /* زيادة في حجم أيقونات وسائل التواصل */
-        }
-        
-        .social-link:hover {
-            background: var(--accent);
-        }
-        
-        /* Portfolio Items */
-        .goals-list .goal-item,
-        .success-steps .step {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        
-        .goals-list .goal-item:last-child,
-        .success-steps .step:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .goals-list h4,
-        .success-steps h4 {
-            font-size: 1.8rem; /* زيادة في حجم عناوين الأهداف والخطوات */
-            margin-bottom: 0.8rem;
-        }
-        
-        .goals-list p,
-        .success-steps p {
-            font-size: 1.5rem; /* زيادة في حجم نص الأهداف والخطوات */
+            background: #c53030;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             body {
-                font-size: 1.2rem; /* تعديل حجم الخط للشاشات الصغيرة */
+                font-size: 1.2rem;
+                padding-top: 70px;
             }
             
             .timeline::before {
@@ -531,8 +479,8 @@
             }
             
             .nav-link {
-                padding: 1rem 1.2rem;
-                font-size: 1.2rem;
+                padding: 0.8rem 1rem;
+                font-size: 1.1rem;
             }
             
             .profile-img {
@@ -587,6 +535,7 @@
         @media (max-width: 480px) {
             body {
                 font-size: 1.1rem;
+                padding-top: 60px;
             }
             
             .profile-img {
@@ -599,8 +548,8 @@
             }
             
             .nav-link {
-                padding: 0.8rem 1rem;
-                font-size: 1.1rem;
+                padding: 0.6rem 0.8rem;
+                font-size: 1rem;
             }
             
             .card {
@@ -1036,20 +985,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>فهد نغيمش حميد الخالدي - معلم متقدم لغة إنجليزية</p>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:iFahadenglish@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-            </div>
-            <p>جميع الحقوق محفوظة &copy; 2023</p>
-        </div>
-    </footer>
 
     <script>
         // Navigation functionality
