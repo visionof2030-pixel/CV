@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -40,11 +40,25 @@
       color: white;
       padding: 2.8rem 0;
       text-align: center;
+      position: relative;
     }
 
-    h1 { font-size: 2.3rem; }
+    h1 { font-size: 2.1rem; }
 
-    /* ✅ الشريط الجانبي */
+    /* ✅ زر اللغة */
+    .lang-btn {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background: white;
+      color: var(--accent);
+      border: none;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     nav {
       position: fixed;
       top: 0;
@@ -131,37 +145,7 @@
       object-fit: cover;
     }
 
-    footer {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-      margin-top: 3rem;
-    }
-
     ul { padding-right: 20px; }
-
-    /* ✅ العداد */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .stat-box {
-      background: #f8fafc;
-      padding: 18px;
-      border-radius: 14px;
-      text-align: center;
-      border: 1px solid #e5e7eb;
-    }
-
-    .stat-number {
-      font-size: 26px;
-      color: var(--accent);
-      font-weight: bold;
-    }
 
     /* ✅ شكل لصق الجروح لدرجة 95 */
     .trophy-wrap {
@@ -178,26 +162,9 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: bold;
-      box-shadow: 0 6px 15px rgba(16,185,129,.35);
-      position: relative;
     }
-
-    .trophy::before,
-    .trophy::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      width: 14px;
-      height: 14px;
-      background: rgba(255,255,255,.6);
-      border-radius: 50%;
-      transform: translateY(-50%);
-    }
-
-    .trophy::before { right: 10px; }
-    .trophy::after { left: 10px; }
 
     /* ✅ الخط الزمني */
     .timeline {
@@ -244,31 +211,37 @@
       margin-bottom: 8px;
     }
 
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <h1>الملف المهني للمعلم فهد الخالدي</h1>
+  <button class="lang-btn" onclick="toggleLang()">EN</button>
+  <h1 id="title">الملف المهني للمعلم فهد الخالدي</h1>
 </header>
 
 <!-- ✅ الشريط الجانبي -->
 <nav>
   <div class="nav-container">
-    <a class="nav-link active" data-section="about"><i class="fa-solid fa-user"></i>نبذة عني</a>
-    <a class="nav-link" data-section="experience"><i class="fa-solid fa-briefcase"></i>خبراتي</a>
-    <a class="nav-link" data-section="skills"><i class="fa-solid fa-star"></i>المهارات</a>
-    <a class="nav-link" data-section="training"><i class="fa-solid fa-graduation-cap"></i>الدورات</a>
-    <a class="nav-link" data-section="contact"><i class="fa-solid fa-envelope"></i>تواصل</a>
+    <a class="nav-link active" data-section="about"><i class="fa-solid fa-user"></i><span class="t-about">نبذة عني</span></a>
+    <a class="nav-link" data-section="experience"><i class="fa-solid fa-briefcase"></i><span class="t-exp">خبراتي</span></a>
+    <a class="nav-link" data-section="skills"><i class="fa-solid fa-star"></i><span class="t-skill">المهارات</span></a>
+    <a class="nav-link" data-section="training"><i class="fa-solid fa-graduation-cap"></i><span class="t-train">الدورات</span></a>
+    <a class="nav-link" data-section="contact"><i class="fa-solid fa-envelope"></i><span class="t-contact">تواصل</span></a>
   </div>
 </nav>
 
 <main class="container">
 
-<!-- ✅ نبذة عني -->
 <section id="about" class="active">
-  <h2 class="section-title">نبذة عني</h2>
+  <h2 class="section-title t-about">نبذة عني</h2>
 
   <div class="card" style="text-align:center">
 
@@ -279,41 +252,21 @@
     <h3>فهد نغيمش حميد الخالدي</h3>
     <p><b>معلم متقدم – تخصص اللغة الإنجليزية</b></p>
 
-    <p>
-      معلّم لغة إنجليزية بخبرة تربوية ممتدة لأكثر من أربعة عشر عامًا في التعليم العام،
-      أؤمن بأن التعليم رسالة سامية وصناعة وعي، وأسعى باستمرار إلى تطوير أسلوبي التدريسي
-      ورفع جودة مخرجات التعلم بما يواكب تطلعات رؤية المملكة 2030. أمتلك شغفًا كبيرًا
-      بتعلم اللغات وصقل مهارات الترجمة، وأسعى لبناء بيئة تعليمية محفزة تُنمّي التفكير
-      النقدي والإبداعي لدى المتعلمين.
+    <p class="t-bio">
+      معلّم لغة إنجليزية بخبرة تربوية تمتد لأكثر من أربعة عشر عامًا في التعليم العام،
+      أسعى باستمرار إلى تطوير أدائي المهني، وبناء بيئة صفية محفزة تنمّي التفكير النقدي
+      والإبداعي لدى الطلاب، وتسهم في تحقيق مستهدفات رؤية المملكة 2030.
     </p>
 
-    <!-- ✅ درجة 95 -->
     <div class="trophy-wrap">
       <div class="trophy">
-        <i class="fa-solid fa-award"></i>
-        حققت درجة 95 في التخصص
-      </div>
-    </div>
-
-    <div class="stats">
-      <div class="stat-box">
-        <div class="stat-number">14+</div>
-        <div>سنة خبرة</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">+130</div>
-        <div>ساعات تدريبية</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">3</div>
-        <div>مدارس</div>
+        ⭐ حققت درجة 95 في التخصص
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ✅ الخبرات -->
 <section id="experience">
   <h2 class="section-title">خبراتي</h2>
 
@@ -346,46 +299,32 @@
   </div>
 </section>
 
-<!-- ✅ المهارات -->
 <section id="skills">
   <h2 class="section-title">المهارات</h2>
   <div class="card">
     <ul>
       <li>إتقان اللغة الإنجليزية تحدثًا وكتابة</li>
-      <li>تطوير وتنفيذ خطط تدريس محفزة ومبتكرة</li>
       <li>إدارة الصفوف بفاعلية وتشجيع التعلم الذاتي</li>
       <li>استخدام أدوات القياس والتقويم الإلكترونية بدقة</li>
       <li>دمج مهارات التفكير النقدي والإبداعي في التعليم</li>
-      <li>شغف مستمر بتعلم اللغات واكتساب مهارات جديدة</li>
-      <li>القدرة على التعليم في بيئات متعددة الثقافات مع استعداد لتعلم لغات إضافية مثل الصينية</li>
+      <li>القدرة على التعليم في بيئات متعددة الثقافات</li>
     </ul>
   </div>
 </section>
 
-<!-- ✅ الدورات -->
 <section id="training">
   <h2 class="section-title">الدورات</h2>
   <div class="card">
     <ul>
-      <li>التفكير الناقد والإبداعي ودمجه في المواد الدراسية</li>
+      <li>التفكير الناقد والإبداعي</li>
       <li>القياس والتقويم التربوي</li>
-      <li>الاستراتيجية الحديثة في تدريس أساسيات اللغة الإنجليزية</li>
-      <li>البيئة الصفية الجاذبة</li>
-      <li>تحليل أداء الطلاب وتقديم التغذية الراجعة</li>
+      <li>الاستراتيجيات الحديثة في تدريس اللغة الإنجليزية</li>
+      <li>تحليل أداء الطلاب والتغذية الراجعة</li>
       <li>أساسيات الترجمة</li>
-      <li>مهارات التعامل مع أدوات القياس والتقويم الإلكترونية</li>
-      <li>التنمية المهنية لمعلمي اللغة الإنجليزية - المستوى الثالث</li>
-      <li>العبقرية في العملية التعليمية</li>
-      <li>بناء الاختيار الجيد</li>
-      <li>توظيف استراتيجيات التعليم في البيئة التدريبية الجاذبة</li>
-      <li>تدريس مهارتي التحدث والاستماع</li>
-      <li>التوعية بقواعد السلوك والمواظبة المحدثة</li>
-      <li>اللقاءات التخصصية لمادة اللغة الإنجليزية</li>
     </ul>
   </div>
 </section>
 
-<!-- ✅ التواصل -->
 <section id="contact">
   <h2 class="section-title">تواصل</h2>
   <div class="card" style="text-align:center">
@@ -400,7 +339,7 @@
 </footer>
 
 <script>
-/* ✅ التنقل بين الأقسام */
+/* ✅ التنقل */
 document.querySelectorAll('.nav-link').forEach(link => {
   link.onclick = () => {
     document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
@@ -410,6 +349,18 @@ document.querySelectorAll('.nav-link').forEach(link => {
     window.scrollTo({top:0});
   }
 });
+
+/* ✅ زر عربي | English */
+let isArabic = true;
+function toggleLang() {
+  isArabic = !isArabic;
+
+  document.getElementById("title").innerText = isArabic
+    ? "الملف المهني للمعلم فهد الخالدي"
+    : "Professional Portfolio - Fahad Al Khaldi";
+
+  document.querySelector(".lang-btn").innerText = isArabic ? "EN" : "AR";
+}
 </script>
 
 </body>
