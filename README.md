@@ -1,4 +1,3 @@
-
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -170,9 +169,9 @@
 
         /* Main Content */
         main {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 20px;
+            max-width: 4000px;
+            margin: 25px auto;
+            padding: 9px;
         }
 
         section {
