@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>الملف المهني | فهد نغيمش الخالدي</title>
+  <title>الملف المهني | فهد الخالدي</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -10,7 +10,6 @@
       --primary: #1a365d;
       --secondary: #0f172a;
       --accent: #2563eb;
-      --light: #ffffff;
       --bg: #f5f7fa;
     }
 
@@ -25,7 +24,7 @@
       background: var(--bg);
       color: #1e293b;
       line-height: 1.8;
-      padding-right: 62px; /* ✅ عرض الشريط الجديد */
+      padding-right: 78px;
     }
 
     .container {
@@ -43,14 +42,15 @@
 
     h1 { font-size: 2.3rem; }
 
-    /* ✅✅✅ شريط جانبي أنحف ولون خط أبيض */
+    /* ✅ الشريط الجانبي أبيض */
     nav {
       position: fixed;
       top: 0;
       right: 0;
       height: 100vh;
-      width: 62px;
-      background: #0f172a;
+      width: 78px;
+      background: #ffffff;
+      border-left: 1px solid #e5e7eb;
       z-index: 999;
     }
 
@@ -59,15 +59,17 @@
       flex-direction: column;
       align-items: center;
       padding-top: 90px;
-      gap: 14px;
+      gap: 16px;
     }
 
+    /* ✅ الخط أزرق وأكبر */
     .nav-link {
-      width: 50px;
-      height: 52px;
-      font-size: 10px;
+      width: 64px;
+      height: 60px;
+      font-size: 13px;
+      font-weight: bold;
       background: transparent;
-      color: #ffffff;  /* ✅ لون يعاكس الأزرق */
+      color: #2563eb;
       text-align: center;
       border-radius: 14px;
       text-decoration: none;
@@ -76,12 +78,12 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      transition: background 0.2s ease;
+      transition: all 0.2s ease;
     }
 
     .nav-link.active,
     .nav-link:hover {
-      background: var(--accent);
+      background: #2563eb;
       color: #ffffff;
     }
 
@@ -136,7 +138,7 @@
     ul { padding-right: 20px; }
 
     @media (max-width: 768px) {
-      body { padding-right: 62px; }
+      body { padding-right: 78px; }
       h1 { font-size: 1.7rem; }
     }
   </style>
@@ -147,16 +149,15 @@
 <header>
   <div class="container">
     <h1>الملف المهني</h1>
-    <p>سيرة ذاتية تفاعلية احترافية</p>
+    <p>المعلم فهد الخالدي</p>
   </div>
 </header>
 
-<!-- ✅ شريط تنقل جانبي مصغر -->
+<!-- ✅ شريط جانبي أبيض -->
 <nav>
   <div class="nav-container">
-    <a class="nav-link active" data-section="about">نبذة</a>
+    <a class="nav-link active" data-section="about">نبذة عني</a>
     <a class="nav-link" data-section="experience">خبراتي</a>
-    <a class="nav-link" data-section="skills">مهاراتي</a>
     <a class="nav-link" data-section="training">الدورات</a>
     <a class="nav-link" data-section="portfolio">الملف</a>
     <a class="nav-link" data-section="contact">تواصل</a>
@@ -165,7 +166,6 @@
 
 <main class="container">
 
-  <!-- نبذة -->
   <section id="about" class="active">
     <h2 class="section-title">نبذة عني</h2>
     <div class="card" style="text-align:center">
@@ -175,68 +175,50 @@
       <h3>فهد نغيمش حميد الخالدي</h3>
       <p><b>معلم متقدم – تخصص اللغة الإنجليزية</b></p>
       <p>
-        معلم لغة إنجليزية بخبرة تزيد عن 14 عامًا في التعليم العام، تمت ترقيتي إلى معلم متقدم عام 2022.
-        أسعى باستمرار إلى تطوير أدائي المهني، وتوظيف التقنيات الحديثة في التعليم، وتحقيق مخرجات تعلم عالية الجودة 
-        بما يتوافق مع رؤية المملكة 2030.
+        معلّم لغة إنجليزية بخبرة تتجاوز 14 عاماً في التعليم العام، تمت ترقيتي إلى رتبة "معلم متقدم" عام 2022.
+        أؤمن بأهمية تطوير المتعلم وبناء شخصيته علمياً وسلوكياً بما ينسجم مع رؤية المملكة 2030.
       </p>
     </div>
   </section>
 
-  <!-- الخبرات -->
   <section id="experience">
-    <h2 class="section-title">الخبرات المهنية</h2>
+    <h2 class="section-title">خبراتي</h2>
     <div class="card">
       <ul>
         <li>معلم لغة إنجليزية – سعيد بن العاص المتوسطة (2017 – الآن)</li>
         <li>معلم لغة إنجليزية – الأمير سعود بن عبدالمحسن (2014 – 2016)</li>
-        <li>معلم لغة إنجليزية – سعيد بن زيد (2012 – 2014)</li>
+        <li>معلّم لغة إنجليزية – سعيد بن زيد (2012 – 2014)</li>
         <li>مترجم – وزارة الحج والعمرة (2011 – 2012)</li>
       </ul>
     </div>
   </section>
 
-  <!-- المهارات -->
-  <section id="skills">
-    <h2 class="section-title">المهارات</h2>
-    <div class="card">
-      <ul>
-        <li>التعليم التفاعلي والرقمي</li>
-        <li>القيادة الصفية وبناء الدافعية</li>
-        <li>التقويم والتغذية الراجعة</li>
-        <li>الترجمة والتواصل متعدد الثقافات</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- الدورات -->
   <section id="training">
-    <h2 class="section-title">الدورات التدريبية</h2>
+    <h2 class="section-title">الدورات</h2>
     <div class="card">
       <ul>
         <li>أكثر من 150 ساعة تدريبية معتمدة</li>
-        <li>استراتيجيات التدريس الحديثة</li>
+        <li>استراتيجيات التعليم الحديثة</li>
         <li>التعليم الإلكتروني</li>
-        <li>القيادة المدرسية</li>
+        <li>القيادة الصفية</li>
       </ul>
     </div>
   </section>
 
-  <!-- الملف المهني -->
   <section id="portfolio">
-    <h2 class="section-title">الملف المهني</h2>
+    <h2 class="section-title">الملف</h2>
     <div class="card">
       <ul>
-        <li>إعداد اختبارات تفاعلية</li>
-        <li>تصميم ملفات HTML تعليمية</li>
-        <li>مبادرات تعليمية تطوعية</li>
-        <li>برامج دعم التحصيل الدراسي</li>
+        <li>إعداد اختبارات إلكترونية تفاعلية</li>
+        <li>تصميم محتوى رقمي للغة الإنجليزية</li>
+        <li>مبادرات تطوعية تعليمية</li>
+        <li>مشاريع تحسين نواتج التعلم</li>
       </ul>
     </div>
   </section>
 
-  <!-- التواصل -->
   <section id="contact">
-    <h2 class="section-title">التواصل</h2>
+    <h2 class="section-title">تواصل</h2>
     <div class="card" style="text-align:center">
       <p>📧 البريد الإلكتروني:  
         <b>iFahadenglish@gmail.com</b>
@@ -247,7 +229,7 @@
 </main>
 
 <footer>
-  <p>© جميع الحقوق محفوظة - فهد نغيمش الخالدي</p>
+  <p>© جميع الحقوق محفوظة - فهد الخالدي</p>
 </footer>
 
 <script>
