@@ -4,8 +4,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الملف المهني | فهد الخالدي - معلم متخصص في اللغة الإنجليزية</title>
     <meta name="description" content="فهد الخالدي - معلم متخصص في اللغة الإنجليزية مع 14+ سنة خبرة في تطوير أساليب التعليم الحديثة. اكتشف ملفي المهني وإنجازاتي التعليمية.">
+    
+    <!-- تحسينات SEO -->
+    <meta property="og:title" content="فهد الخالدي - معلم متخصص في اللغة الإنجليزية">
+    <meta property="og:description" content="معلم متخصص في اللغة الإنجليزية مع 14+ سنة خبرة في تطوير أساليب التعليم الحديثة">
+    <meta property="og:image" content="https://i.ibb.co/k66psVmZ/20220817-151032.jpg">
+    <meta property="og:url" content="https://fahad-alkhaldi.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="فهد الخالدي - معلم متخصص في اللغة الإنجليزية">
+    <meta name="twitter:description" content="معلم متخصص في اللغة الإنجليزية مع 14+ سنة خبرة في تطوير أساليب التعليم الحديثة">
+    <meta name="twitter:image" content="https://i.ibb.co/k66psVmZ/20220817-151032.jpg">
+    
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1A3A5F">
+    
     <style>
         :root {
             /* الألوان المحدثة لتتناسب مع طقم النصر */
@@ -1109,7 +1126,139 @@
             transform: scale(1.2);
         }
 
-        /* Responsive Design */
+        /* ========== التحسينات الجديدة ========== */
+        
+        /* زر العودة للأعلى */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--yellow-gradient);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        /* مؤشر تقدم التمرير */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: transparent;
+            z-index: 1001;
+        }
+
+        .scroll-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: var(--yellow-gradient);
+            transition: width 0.1s ease;
+        }
+
+        /* تحسينات للصور (Lazy Loading) */
+        img.lazy {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        img.lazy.loaded {
+            opacity: 1;
+        }
+
+        /* تحسينات للنموذج */
+        .form-message {
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .form-message.success {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            color: #4CAF50;
+            display: block;
+        }
+
+        .form-message.error {
+            background: rgba(244, 67, 54, 0.1);
+            border: 1px solid #F44336;
+            color: #F44336;
+            display: block;
+        }
+
+        .btn-loading {
+            position: relative;
+            pointer-events: none;
+        }
+
+        .btn-loading::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border: 2px solid transparent;
+            border-top-color: var(--primary-dark);
+            border-radius: 50%;
+            animation: button-loading-spinner 1s ease infinite;
+        }
+
+        @keyframes button-loading-spinner {
+            from {
+                transform: rotate(0turn);
+            }
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        /* تحسينات للوضع الليلي - تحسين التباين */
+        :root[data-theme="dark"] .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        :root[data-theme="dark"] .stat-card,
+        :root[data-theme="dark"] .vision-item,
+        :root[data-theme="dark"] .skill-category,
+        :root[data-theme="dark"] .achievement-card,
+        :root[data-theme="dark"] .training-card,
+        :root[data-theme="dark"] .tech-card,
+        :root[data-theme="dark"] .portfolio-item,
+        :root[data-theme="dark"] .testimonial-slide,
+        :root[data-theme="dark"] .gallery-item {
+            background: linear-gradient(135deg, #1E1E1E, #2A2A2A);
+        }
+
+        /* تحسينات للتنقل على الجوال */
         @media (max-width: 768px) {
             body {
                 padding-top: 82px;
@@ -1185,6 +1334,23 @@
             .gallery-container {
                 max-height: 400px;
             }
+            
+            /* تحسينات إضافية للجوال */
+            .back-to-top {
+                bottom: 20px;
+                left: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+            
+            .nav-scroll {
+                padding: 0 10px;
+            }
+            
+            .nav-item span {
+                font-size: 0.5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1220,6 +1386,13 @@
             .gallery-btn {
                 padding: 8px 15px;
                 font-size: 0.8rem;
+            }
+            
+            .back-to-top {
+                bottom: 15px;
+                left: 15px;
+                width: 40px;
+                height: 40px;
             }
         }
 
@@ -1317,6 +1490,11 @@
         </div>
     </header>
 
+    <!-- مؤشر تقدم التمرير -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
     <!-- باقي المحتوى -->
     <main>
         <!-- Hero Section -->
@@ -1359,7 +1537,7 @@
             <div class="card fade-in-up">
                 <div class="profile-header">
                     <div class="profile-img">
-                        <img src="https://i.ibb.co/k66psVmZ/20220817-151032.jpg" alt="صورة فهد الخالدي">
+                        <img src="https://i.ibb.co/k66psVmZ/20220817-151032.jpg" alt="صورة فهد الخالدي" class="lazy" data-src="https://i.ibb.co/k66psVmZ/20220817-151032.jpg">
                     </div>
                     <div class="profile-info">
                         <h2 id="name">فهد نغيمش حميد الخالدي</h2>
@@ -1554,7 +1732,7 @@
                 <div class="portfolio-grid">
                     <!-- مشروع اختبار الرخصة المهنية التفاعلي -->
                     <div class="portfolio-item" data-category="interactive">
-                        <img src="https://i.ibb.co/h12KB7Gv/Professional-License-Exam.png" alt="اختبار الرخصة المهنية التفاعلي">
+                        <img src="https://i.ibb.co/h12KB7Gv/Professional-License-Exam.png" alt="اختبار الرخصة المهنية التفاعلي" class="lazy" data-src="https://i.ibb.co/h12KB7Gv/Professional-License-Exam.png">
                         <div class="portfolio-content">
                             <h3 id="project1Title">مشروع: اختبار الرخصة المهنية التفاعلي</h3>
                             <p id="project1Desc">مشروع تعليمي رقمي يهدف إلى محاكاة اختبار الرخصة المهنية للمعلمين، من خلال تقديم أسئلة تفاعلية مبنية على المعايير المعتمدة، مع تغذية راجعة فورية توضح السبب العلمي لكل إجابة صحيحة أو خاطئة، بما يسهم في رفع كفاءة المتدربين وتعزيز جاهزيتهم للاختبار الرسمي.</p>
@@ -1579,32 +1757,32 @@
                                 <div class="gallery-scroll" id="galleryScroll">
                                     <!-- الصور الثلاثة الأولى مع عناوينها الحالية -->
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/YrXjKC4/strategy7.jpg" alt="مهارات القرن الحادي والعشرين">
+                                        <img src="https://i.ibb.co/YrXjKC4/strategy7.jpg" alt="مهارات القرن الحادي والعشرين" class="lazy" data-src="https://i.ibb.co/YrXjKC4/strategy7.jpg">
                                         <div class="gallery-caption" id="galleryCaption1">تعزيز مهارات القرن الحادي والعشرين لدى الطلاب</div>
                                     </div>
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/DPWWd5Z9/strategy4.jpg" alt="أنشطة تعليمية تفاعلية">
+                                        <img src="https://i.ibb.co/DPWWd5Z9/strategy4.jpg" alt="أنشطة تعليمية تفاعلية" class="lazy" data-src="https://i.ibb.co/DPWWd5Z9/strategy4.jpg">
                                         <div class="gallery-caption" id="galleryCaption2">أنشطة تعليمية تفاعلية لتحسين مستوى التحصيل الدراسي</div>
                                     </div>
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/bR1Cn1WZ/strategy6.jpg" alt="بيئة تعليمية نشطة">
+                                        <img src="https://i.ibb.co/bR1Cn1WZ/strategy6.jpg" alt="بيئة تعليمية نشطة" class="lazy" data-src="https://i.ibb.co/bR1Cn1WZ/strategy6.jpg">
                                         <div class="gallery-caption" id="galleryCaption3">إعداد بيئة تعليمية نشطة ومحفزة للطلاب</div>
                                     </div>
                                     <!-- باقي الصور مع التعليق الجديد -->
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/DyNDhNX/strategy1.jpg" alt="استراتيجية تعليمية تفاعلية">
+                                        <img src="https://i.ibb.co/DyNDhNX/strategy1.jpg" alt="استراتيجية تعليمية تفاعلية" class="lazy" data-src="https://i.ibb.co/DyNDhNX/strategy1.jpg">
                                         <div class="gallery-caption">تطبيق استراتيجيات تعليمية حديثة لتعزيز التفاعل داخل الصف.</div>
                                     </div>
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/BK6XTNG0/strategy2.jpg" alt="التعلم التعاوني">
+                                        <img src="https://i.ibb.co/BK6XTNG0/strategy2.jpg" alt="التعلم التعاوني" class="lazy" data-src="https://i.ibb.co/BK6XTNG0/strategy2.jpg">
                                         <div class="gallery-caption">تطبيق استراتيجيات تعليمية حديثة لتعزيز التفاعل داخل الصف.</div>
                                     </div>
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/LzbN9WYb/strategy3.jpg" alt="تقنيات تعليمية حديثة">
+                                        <img src="https://i.ibb.co/LzbN9WYb/strategy3.jpg" alt="تقنيات تعليمية حديثة" class="lazy" data-src="https://i.ibb.co/LzbN9WYb/strategy3.jpg">
                                         <div class="gallery-caption">تطبيق استراتيجيات تعليمية حديثة لتعزيز التفاعل داخل الصف.</div>
                                     </div>
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/C3bhdCFt/strategy5.jpg" alt="مهارات التفكير والعمل">
+                                        <img src="https://i.ibb.co/C3bhdCFt/strategy5.jpg" alt="مهارات التفكير والعمل" class="lazy" data-src="https://i.ibb.co/C3bhdCFt/strategy5.jpg">
                                         <div class="gallery-caption">تطبيق استراتيجيات تعليمية حديثة لتعزيز التفاعل داخل الصف.</div>
                                     </div>
                                 </div>
@@ -1629,7 +1807,7 @@
                     
                     <!-- مشروع عروض تقديمية -->
                     <div class="portfolio-item" data-category="presentations">
-                        <img src="https://via.placeholder.com/300x180/1A3A5F/FFFFFF?text=عروض+تقديمية" alt="عروض تقديمية">
+                        <img src="https://via.placeholder.com/300x180/1A3A5F/FFFFFF?text=عروض+تقديمية" alt="عروض تقديمية" class="lazy" data-src="https://via.placeholder.com/300x180/1A3A5F/FFFFFF?text=عروض+تقديمية">
                         <div class="portfolio-content">
                             <h3 id="project3Title">عروض تقديمية تفاعلية</h3>
                             <p id="project3Desc">تصميم عروض تفاعلية جذابة للطلاب باستخدام أحدث الأدوات والتقنيات التعليمية. تتضمن هذه العروض أنشطة تفاعلية، ومقاطع فيديو تعليمية، وأسئلة تقييم فورية لضمان مشاركة فعالة من الطلاب.</p>
@@ -1713,7 +1891,8 @@
                     <div class="form-group">
                         <textarea id="contactMessage" placeholder="رسالتك..." rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <div class="form-message" id="formMessage"></div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitBtn">
                         <i class="fas fa-paper-plane"></i>
                         <span id="sendMessageBtn">إرسال الرسالة</span>
                     </button>
@@ -1721,6 +1900,11 @@
             </div>
         </section>
     </main>
+
+    <!-- زر العودة للأعلى -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <footer>
         <div class="footer-content">
@@ -1742,11 +1926,33 @@
         "jobTitle": "معلم متقدم - تخصص اللغة الإنجليزية",
         "description": "معلم متخصص في اللغة الإنجليزية مع 14+ سنة خبرة في تطوير أساليب التعليم الحديثة",
         "email": "iFahadenglish@gmail.com",
-        "telephone": "+9665554449824",
+        "telephone": "+966554449824",
         "url": "https://example.com",
         "knowsAbout": ["التعليم", "اللغة الإنجليزية", "التقنية التعليمية", "التدريس التفاعلي"],
-        "hasCredential": "معلم متقدم"
+        "hasCredential": "معلم متقدم",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "وزارة التعليم السعودية"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "جامعة أم القرى"
+        }
     }
+    </script>
+
+    <!-- ملف Manifest لتطبيق PWA -->
+    <script>
+        // تسجيل Service Worker لتطبيق PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
     </script>
 
     <script>
@@ -1846,7 +2052,7 @@
                 // ترجمة الاتصال
                 contactSubtitle: "للتواصل",
                 contactEmail: "iFahadenglish@gmail.com",
-                contactPhone: "+9665554449824",
+                contactPhone: "+966554449824",
                 contactFormTitle: "أرسل رسالة",
                 // ترجمة الفوتر
                 footerName: "فهد الخالدي",
@@ -1893,8 +2099,8 @@
                 testimonialsTitle: "Testimonials",
                 techTitle: "Technology",
                 contactTitle: "Contact Me",
-                name: "Fahad Naghimish Humaid AlKhaldi",
-                jobTitle: "Senior English Teacher",
+                name: "Fahad Nughaimesh Humaid AlKhaldi",
+                jobTitle: "Advanced English Teacher",
                 bioText: "I believe that education is not merely about transferring knowledge, but a noble mission to make an impact and build individuals. I aspire to be an active part in developing education in the Kingdom by employing modern technologies, creating stimulating learning environments that enhance critical and creative thinking, and building student confidence. My future vision is based on continuous learning, developing professional skills, and keeping pace with digital transformations that serve educational outcomes and quality within the framework of Saudi Vision 2030.",
                 badge: "🏆 Achieved a score of 95 in specialization",
                 stat1: "Years of Experience",
@@ -1970,7 +2176,7 @@
                 // ترجمة الاتصال
                 contactSubtitle: "For Contact",
                 contactEmail: "iFahadenglish@gmail.com",
-                contactPhone: "+9665554449824",
+                contactPhone: "+966554449824",
                 contactFormTitle: "Send a Message",
                 // ترجمة الفوتر
                 footerName: "Fahad AlKhaldi",
@@ -2240,7 +2446,7 @@
             project1Desc.textContent = t.project1Desc;
             project1Link.textContent = t.project1Link;
             project2Title.textContent = t.project2Title;
-            project2Desc1.textContent = t.project2Desc1;
+            project2Desc1.innerHTML = t.project2Desc1;
             project3Title.textContent = t.project3Title;
             project3Desc.textContent = t.project3Desc;
             project3Link.textContent = t.project3Link;
@@ -2352,6 +2558,138 @@
         navScrollNext.addEventListener('click', () => {
             navScroll.scrollBy({ left: -200, behavior: 'smooth' });
         });
+
+        // ========== التحسينات الجديدة ==========
+
+        // زر العودة للأعلى
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // مؤشر تقدم التمرير
+        const scrollProgressBar = document.querySelector('.scroll-progress-bar');
+
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgressBar.style.width = scrolled + '%';
+        });
+
+        // Lazy Loading للصور
+        function initLazyLoading() {
+            const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+            
+            if ('IntersectionObserver' in window) {
+                const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            const lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove('lazy');
+                            lazyImage.classList.add('loaded');
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // Fallback للمتصفحات التي لا تدعم IntersectionObserver
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.remove('lazy');
+                    lazyImage.classList.add('loaded');
+                });
+            }
+        }
+
+        // تحسين نموذج التواصل
+        function initContactForm() {
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+            const submitBtn = document.getElementById('submitBtn');
+            const sendMessageBtnText = document.getElementById('sendMessageBtn');
+            
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('contactName').value.trim();
+                const email = document.getElementById('contactEmailInput').value.trim();
+                const message = document.getElementById('contactMessage').value.trim();
+                
+                // التحقق من صحة البيانات
+                if (!name || !email || !message) {
+                    showFormMessage(
+                        currentLang === 'ar' ? 
+                            'يرجى ملء جميع الحقول المطلوبة.' : 
+                            'Please fill in all required fields.',
+                        'error'
+                    );
+                    return;
+                }
+                
+                // التحقق من صحة البريد الإلكتروني
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showFormMessage(
+                        currentLang === 'ar' ? 
+                            'يرجى إدخال بريد إلكتروني صحيح.' : 
+                            'Please enter a valid email address.',
+                        'error'
+                    );
+                    return;
+                }
+                
+                // إظهار حالة التحميل
+                setButtonLoading(true);
+                
+                // محاكاة إرسال النموذج (يمكن استبدالها برمز إرسال حقيقي)
+                setTimeout(() => {
+                    const successMessage = currentLang === 'ar' ? 
+                        `شكراً ${name}، تم استلام رسالتك بنجاح! سأتواصل معك قريباً.` : 
+                        `Thank you ${name}, your message has been received! I will contact you soon.`;
+                    
+                    showFormMessage(successMessage, 'success');
+                    contactForm.reset();
+                    setButtonLoading(false);
+                }, 2000);
+            });
+            
+            function showFormMessage(message, type) {
+                formMessage.textContent = message;
+                formMessage.className = 'form-message ' + type;
+                formMessage.style.display = 'block';
+                
+                // إخفاء الرسالة بعد 5 ثواني
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
+            
+            function setButtonLoading(loading) {
+                if (loading) {
+                    submitBtn.classList.add('btn-loading');
+                    sendMessageBtnText.textContent = currentLang === 'ar' ? 'جاري الإرسال...' : 'Sending...';
+                    submitBtn.disabled = true;
+                } else {
+                    submitBtn.classList.remove('btn-loading');
+                    sendMessageBtnText.textContent = currentLang === 'ar' ? 'إرسال الرسالة' : 'Send Message';
+                    submitBtn.disabled = false;
+                }
+            }
+        }
 
         // وظيفة إدارة معرض الصور
         function initGallery() {
@@ -2524,61 +2862,17 @@
             fadeElements.forEach(el => observer.observe(el));
         }
 
-        // وظيفة نموذج التواصل
-        function initContactForm() {
-            const contactForm = document.getElementById('contactForm');
-            
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                const name = document.getElementById('contactName').value;
-                const email = document.getElementById('contactEmailInput').value;
-                const message = document.getElementById('contactMessage').value;
-                
-                // هنا يمكنك إضافة كود إرسال النموذج إلى الخادم
-                // لأغراض العرض، سنعرض رسالة نجاح فقط
-                
-                alert(currentLang === 'ar' ? 
-                    `شكراً ${name}، تم استلام رسالتك بنجاح! سأتواصل معك قريباً.` : 
-                    `Thank you ${name}, your message has been received! I will contact you soon.`);
-                
-                // إعادة تعيين النموذج
-                contactForm.reset();
-            });
-        }
-
         // التحميل الأولي
         loadLanguage(currentLang);
         
         // تهيئة جميع المكونات عند تحميل الصفحة
         document.addEventListener('DOMContentLoaded', () => {
+            initLazyLoading();
             initGallery();
             initPortfolioFilter();
             initTestimonialSlider();
             initScrollAnimations();
             initContactForm();
-        });
-
-        // تحميل الصور بشكل كسول (Lazy Loading)
-        document.addEventListener('DOMContentLoaded', function() {
-            const lazyImages = [].slice.call(document.querySelectorAll('img[data-src]'));
-            
-            if ('IntersectionObserver' in window) {
-                const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            const lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
-                            lazyImage.classList.remove('lazy');
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
-                });
-                
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            }
         });
     </script>
 </body>
