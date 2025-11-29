@@ -1,20 +1,20 @@
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الملف المهني | فهد الخالدي - معلم متخصص في اللغة الإنجليزية</title>
-    <meta name="description" content="فهد الخالدي - معلم متخصص في اللغة الإنجليزية مع 14+ سنة خبرة في تطوير أساليب التعليم الحديثة. اكتشف ملفي المهني وإنجازاتي التعليمية.">
+    <meta name="description" content="فهد الخالدي - معلم متخصص في اللغة الإنجليزية مع 13+ سنة خبرة في تطوير أساليب التعليم الحديثة. اكتشف ملفي المهني وإنجازاتي التعليمية.">
     
     <!-- تحسينات SEO -->
     <meta property="og:title" content="فهد الخالدي - معلم متخصص في اللغة الإنجليزية">
-    <meta property="og:description" content="معلم متخصص في اللغة الإنجليزية مع 14+ سنة خبرة في تطوير أساليب التعليم الحديثة">
+    <meta property="og:description" content="معلم متخصص في اللغة الإنجليزية مع 13+ سنة خبرة في تطوير أساليب التعليم الحديثة">
     <meta property="og:image" content="https://i.ibb.co/k66psVmZ/20220817-151032.jpg">
     <meta property="og:url" content="https://fahad-alkhaldi.com">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="فهد الخالدي - معلم متخصص في اللغة الإنجليزية">
-    <meta name="twitter:description" content="معلم متخصص في اللغة الإنجليزية مع 14+ سنة خبرة في تطوير أساليب التعليم الحديثة">
+    <meta name="twitter:description" content="معلم متخصص في اللغة الإنجليزية مع 13+ سنة خبرة في تطوير أساليب التعليم الحديثة">
     <meta name="twitter:image" content="https://i.ibb.co/k66psVmZ/20220817-151032.jpg">
     
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
@@ -1499,6 +1499,36 @@
             padding-bottom: 8px;
             border-bottom: 2px solid var(--accent);
         }
+
+        /* أنماط إضافية للإنجازات */
+        .achievement-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .achievement-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تحسينات لتحميل الصور بشكل أسرع */
+        .certificate-image,
+        .participation-image,
+        .achievement-image {
+            opacity: 1 !important;
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-image:hover,
+        .participation-image:hover,
+        .achievement-image:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 
@@ -1629,7 +1659,7 @@
             <div class="card fade-in-up">
                 <div class="profile-header">
                     <div class="profile-img">
-                        <img src="https://i.ibb.co/k66psVmZ/20220817-151032.jpg" alt="صورة فهد الخالدي" class="lazy" data-src="https://i.ibb.co/k66psVmZ/20220817-151032.jpg">
+                        <img src="https://i.ibb.co/k66psVmZ/20220817-151032.jpg" alt="صورة فهد الخالدي">
                     </div>
                     <div class="profile-info">
                         <h2 id="name">فهد نغيمش حميد الخالدي</h2>
@@ -1731,15 +1761,20 @@
             <h2 class="section-title" id="achievementsTitle">الإنجازات</h2>
             <div class="card fade-in-up">
                 <div class="achievement-card">
-                    <div class="achievement-year">2022</div>
+                    <div class="achievement-year">2021</div>
                     <div class="achievement-content">
                         <p id="achievementText">
-                            في عام 2022 حصلتُ على ترقية إلى رتبة معلم متقدم بعد مسيرة مهنية امتدت لسنوات كمعلم ممارس، قدمت خلالها أداءً متميزًا أسهم في تطوير العملية التعليمية داخل المدرسة. جاءت هذه الترقية تقديرًا لجهودي في توظيف استراتيجيات تدريس حديثة تعزز مهارات التفكير النقدي والإبداعي لدى الطلاب، إضافة إلى قدرتي على تحليل نواتج التعلم وبناء خطط علاجية فردية أثمرت عن تحسين واضح في مستويات الطلاب.<br><br>
+                            في عام 2021 حصلتُ على ترقية إلى رتبة معلم متقدم بعد مسيرة مهنية امتدت لسنوات كمعلم ممارس، قدمت خلالها أداءً متميزًا أسهم في تطوير العملية التعليمية داخل المدرسة. جاءت هذه الترقية تقديرًا لجهودي في توظيف استراتيجيات تدريس حديثة تعزز مهارات التفكير النقدي والإبداعي لدى الطلاب، إضافة إلى قدرتي على تحليل نواتج التعلم وبناء خطط علاجية فردية أثمرت عن تحسين واضح في مستويات الطلاب.<br><br>
 
-                            وقد عكست هذه الترقية ثقة الجهة التعليمية بمهاراتي المهنية، خصوصًا في مجال تصميم أنشطة مبتكرة تُدمج مهارات الفهم العميق، والعمل التعاوني، والتعليم الذاتي داخل البيئة الصفية. كما كانت اعترافًا بدوري في تطوير البرامج التربوية والأنشطة التعليمية قبل عام 2022، ومساهمتي في بناء بيئة صفية محفزة يشعر فيها الطلاب بالأمان والرغبة في المشاركة والتعلم.<br><br>
+                            وقد عكست هذه الترقية ثقة الجهة التعليمية بمهاراتي المهنية، خصوصًا في مجال تصميم أنشطة مبتكرة تُدمج مهارات الفهم العميق، والعمل التعاوني، والتعليم الذاتي داخل البيئة الصفية. كما كانت اعترافًا بدوري في تطوير البرامج التربوية والأنشطة التعليمية قبل عام 2021، ومساهمتي في بناء بيئة صفية محفزة يشعر فيها الطلاب بالأمان والرغبة في المشاركة والتعلم.<br><br>
 
                             تعد هذه الترقية محطة مهمة في مسيرتي، لأنها لم تكن مجرد انتقال إلى مستوى وظيفي أعلى، بل كانت نتيجة تراكم خبرات وممارسات مهنية أثبتت أثرها على الطلاب وعلى منظومة التعليم داخل المدرسة. واليوم أواصل عملي كمعلم متقدم ملتزم بالتحسين المستمر، وتطبيق أفضل الممارسات التربوية، والمساهمة في رفع جودة التعليم وتحقيق نواتج تعلم أعلى.
                         </p>
+                        
+                        <div class="achievement-images">
+                            <img src="https://i.ibb.co/hJVKBW78/1c52955c-eaa9-4550-b838-62f29861106d.jpg" alt="إنجاز 2021 - صورة 1" class="achievement-image">
+                            <img src="https://i.ibb.co/d05Gb47j/IMG-1817.jpg" alt="إنجاز 2021 - صورة 2" class="achievement-image">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1782,7 +1817,7 @@
                     <div class="certificates-grid">
                         <!-- دورة 1 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/s9fcJcr7/cert1.jpg" alt="شهادة مهارات التفكير الناقد" class="certificate-image lazy" data-src="https://i.ibb.co/s9fcJcr7/cert1.jpg">
+                            <img src="https://i.ibb.co/HLLRYMBb/Screenshot-2025-11-28-20-39-26-48-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة مهارات التفكير الناقد" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">مهارات التفكير الناقد</h3>
                                 <a href="https://rb.gy/fo356i" class="certificate-download" target="_blank">تحميل الشهادة</a>
@@ -1791,7 +1826,7 @@
                         
                         <!-- دورة 2 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/6cHn5ny1/cert2.jpg" alt="شهادة القياس والتقويم التربوي" class="certificate-image lazy" data-src="https://i.ibb.co/6cHn5ny1/cert2.jpg">
+                            <img src="https://i.ibb.co/B2PyP3MX/Screenshot-2025-11-28-20-39-52-63-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة القياس والتقويم التربوي" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">القياس والتقويم التربوي</h3>
                                 <a href="https://rebrand.ly/kfo5ofx" class="certificate-download" target="_blank">تحميل الشهادة</a>
@@ -1800,7 +1835,7 @@
                         
                         <!-- دورة 3 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/DfbgfFtL/cert3.jpg" alt="شهادة الاستراتيجيات الحديثة في تدريس أساسيات اللغة الإنجليزية" class="certificate-image lazy" data-src="https://i.ibb.co/DfbgfFtL/cert3.jpg">
+                            <img src="https://i.ibb.co/WWZ1prn6/Screenshot-2025-11-28-20-40-12-19-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة الاستراتيجيات الحديثة في تدريس أساسيات اللغة الإنجليزية" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">الاستراتيجيات الحديثة في تدريس أساسيات اللغة الإنجليزية</h3>
                                 <a href="https://rebrand.ly/m3ktvk8" class="certificate-download" target="_blank">تحميل الشهادة</a>
@@ -1809,7 +1844,7 @@
                         
                         <!-- دورة 4 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/7JH4pjBT/cert4.jpg" alt="شهادة البيئة الصفية الجاذبة" class="certificate-image lazy" data-src="https://i.ibb.co/7JH4pjBT/cert4.jpg">
+                            <img src="https://i.ibb.co/v6DJ9dWj/Screenshot-2025-11-28-20-40-36-41-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة البيئة الصفية الجاذبة" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">البيئة الصفية الجاذبة</h3>
                                 <a href="https://rebrand.ly/0hter6k" class="certificate-download" target="_blank">تحميل الشهادة</a>
@@ -1818,70 +1853,70 @@
                         
                         <!-- دورة 5 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/99B2rcMN/cert5.jpg" alt="شهادة تحليل أداء الطلاب وتقديم تغذية راجعة" class="certificate-image lazy" data-src="https://i.ibb.co/99B2rcMN/cert5.jpg">
+                            <img src="https://i.ibb.co/4nfpRyzC/Screenshot-2025-11-28-20-41-00-72-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة تحليل أداء الطلاب وتقديم تغذية راجعة" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">تحليل أداء الطلاب وتقديم تغذية راجعة</h3>
                                 <a href="https://rebrand.ly/6as769g" class="certificate-download" target="_blank">تحميل الشهادة</a>
                             </div>
                         </div>
                         
-                        <!-- دورة 7 -->
+                        <!-- دورة 6 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/xShYN2g7/cert7.jpg" alt="شهادة مهارات التعامل مع أدوات القياس والتقويم الإلكترونية" class="certificate-image lazy" data-src="https://i.ibb.co/xShYN2g7/cert7.jpg">
+                            <img src="https://i.ibb.co/GQvLQQBJ/Screenshot-2025-11-28-20-43-23-67-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة مهارات التعامل مع أدوات القياس والتقويم الإلكترونية" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">مهارات التعامل مع أدوات القياس والتقويم الإلكترونية</h3>
                                 <a href="https://rebrand.ly/gyo6bx8" class="certificate-download" target="_blank">تحميل الشهادة</a>
                             </div>
                         </div>
                         
-                        <!-- دورة 8 -->
+                        <!-- دورة 7 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/BHj37qKz/cert8.jpg" alt="شهادة التنمية المهنية لمعلمي اللغة الإنجليزية" class="certificate-image lazy" data-src="https://i.ibb.co/BHj37qKz/cert8.jpg">
+                            <img src="https://i.ibb.co/0VR7gkVJ/Screenshot-2025-11-28-20-43-45-67-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة التنمية المهنية لمعلمي اللغة الإنجليزية" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">التنمية المهنية لمعلمي اللغة الإنجليزية</h3>
                                 <a href="https://rebrand.ly/cvaq07u" class="certificate-download" target="_blank">تحميل الشهادة</a>
                             </div>
                         </div>
                         
-                        <!-- دورة 9 -->
+                        <!-- دورة 8 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/x8KmXG0m/cert9.jpg" alt="شهادة العبقرية في العملية التدريبية TOT" class="certificate-image lazy" data-src="https://i.ibb.co/x8KmXG0m/cert9.jpg">
+                            <img src="https://i.ibb.co/fzccMHsX/Screenshot-2025-11-28-20-44-11-62-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة العبقرية في العملية التدريبية TOT" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">العبقرية في العملية التدريبية TOT</h3>
                                 <a href="https://rebrand.ly/3b4fce" class="certificate-download" target="_blank">تحميل الشهادة</a>
                             </div>
                         </div>
                         
-                        <!-- دورة 10 -->
+                        <!-- دورة 9 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/MxJxBHsH/cert10.jpg" alt="شهادة بناء الاختبار الجيد" class="certificate-image lazy" data-src="https://i.ibb.co/MxJxBHsH/cert10.jpg">
+                            <img src="https://i.ibb.co/jZqM8wg6/Screenshot-2025-11-28-20-44-30-11-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة بناء الاختبار الجيد" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">بناء الاختبار الجيد</h3>
                                 <a href="https://rebrand.ly/jecmws4" class="certificate-download" target="_blank">تحميل الشهادة</a>
                             </div>
                         </div>
                         
-                        <!-- دورة 11 -->
+                        <!-- دورة 10 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/60LbCHLy/cert11.jpg" alt="شهادة توظيف استراتيجيات التعليم في البيئة التدريبية الجاذبة" class="certificate-image lazy" data-src="https://i.ibb.co/60LbCHLy/cert11.jpg">
+                            <img src="https://i.ibb.co/LhNrvYBp/Screenshot-2025-11-28-20-44-48-81-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة توظيف استراتيجيات التعليم في البيئة التدريبية الجاذبة" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">توظيف استراتيجيات التعليم في البيئة التدريبية الجاذبة</h3>
                                 <a href="https://2cm.es/1kaU8" class="certificate-download" target="_blank">تحميل الشهادة</a>
                             </div>
                         </div>
                         
-                        <!-- دورة 12 -->
+                        <!-- دورة 11 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/Z6mRby92/cert12.jpg" alt="شهادة تدريس مهاراتي التحدث والاستماع" class="certificate-image lazy" data-src="https://i.ibb.co/Z6mRby92/cert12.jpg">
+                            <img src="https://i.ibb.co/N6F1RcZ5/Screenshot-2025-11-28-20-45-08-47-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة تدريس مهاراتي التحدث والاستماع" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">تدريس مهاراتي التحدث والاستماع</h3>
                                 <a href="https://2cm.es/1kaUi" class="certificate-download" target="_blank">تحميل الشهادة</a>
                             </div>
                         </div>
                         
-                        <!-- دورة 13 -->
+                        <!-- دورة 12 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/rGVtkJN0/cert13.jpg" alt="شهادة اللقاءات التخصصية - لغة انجليزية" class="certificate-image lazy" data-src="https://i.ibb.co/rGVtkJN0/cert13.jpg">
+                            <img src="https://i.ibb.co/FLF62JB7/Screenshot-2025-11-28-20-45-33-32-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة اللقاءات التخصصية - لغة انجليزية" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">اللقاءات التخصصية - لغة انجليزية</h3>
                                 <a href="https://2cm.es/1kaUn" class="certificate-download" target="_blank">تحميل الشهادة</a>
@@ -1894,9 +1929,9 @@
                 <div class="training-category">
                     <h3 class="training-category-title" id="trainingCategory2">أخرى</h3>
                     <div class="certificates-grid">
-                        <!-- دورة 6 -->
+                        <!-- دورة 13 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/mV52L5Hf/cert6.jpg" alt="شهادة أساسيات الترجمة" class="certificate-image lazy" data-src="https://i.ibb.co/mV52L5Hf/cert6.jpg">
+                            <img src="https://i.ibb.co/84tXzBZw/Screenshot-2025-11-28-20-42-57-73-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة أساسيات الترجمة" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">أساسيات الترجمة</h3>
                                 <a href="https://rebrand.ly/ya3twae" class="certificate-download" target="_blank">تحميل الشهادة</a>
@@ -1905,7 +1940,7 @@
                         
                         <!-- دورة 14 -->
                         <div class="certificate-item">
-                            <img src="https://i.ibb.co/wZsxpBRX/cert14.jpg" alt="شهادة العمل التطوعي" class="certificate-image lazy" data-src="https://i.ibb.co/wZsxpBRX/cert14.jpg">
+                            <img src="https://i.ibb.co/XrpNtj7S/Screenshot-2025-11-28-20-45-52-18-f541918c7893c52dbd1ee5d319333948.jpg" alt="شهادة العمل التطوعي" class="certificate-image">
                             <div class="certificate-content">
                                 <h3 class="certificate-title">شهادة العمل التطوعي</h3>
                                 <a href="https://2cm.es/1kaUv" class="certificate-download" target="_blank">تحميل الشهادة</a>
@@ -1944,7 +1979,7 @@
                 <div class="portfolio-grid">
                     <!-- مشروع اختبار الرخصة المهنية التفاعلي -->
                     <div class="portfolio-item" data-category="interactive">
-                        <img src="https://i.ibb.co/h12KB7Gv/Professional-License-Exam.png" alt="اختبار الرخصة المهنية التفاعلي" class="lazy" data-src="https://i.ibb.co/h12KB7Gv/Professional-License-Exam.png">
+                        <img src="https://i.ibb.co/h12KB7Gv/Professional-License-Exam.png" alt="اختبار الرخصة المهنية التفاعلي">
                         <div class="portfolio-content">
                             <h3 id="project1Title">مشروع: اختبار الرخصة المهنية التفاعلي</h3>
                             <p id="project1Desc">مشروع تعليمي رقمي يهدف إلى محاكاة اختبار الرخصة المهنية للمعلمين، من خلال تقديم أسئلة تفاعلية مبنية على المعايير المعتمدة، مع تغذية راجعة فورية توضح السبب العلمي لكل إجابة صحيحة أو خاطئة، بما يسهم في رفع كفاءة المتدربين وتعزيز جاهزيتهم للاختبار الرسمي.</p>
@@ -1969,33 +2004,29 @@
                                 <div class="gallery-scroll" id="galleryScroll">
                                     <!-- الصور الثلاثة الأولى مع عناوينها الحالية -->
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/YrXjKC4/strategy7.jpg" alt="مهارات القرن الحادي والعشرين" class="lazy" data-src="https://i.ibb.co/YrXjKC4/strategy7.jpg">
+                                        <img src="https://i.ibb.co/YrXjKC4/strategy7.jpg" alt="مهارات القرن الحادي والعشرين">
                                         <div class="gallery-caption" id="galleryCaption1">تعزيز مهارات القرن الحادي والعشرين لدى الطلاب</div>
                                     </div>
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/DPWWd5Z9/strategy4.jpg" alt="أنشطة تعليمية تفاعلية" class="lazy" data-src="https://i.ibb.co/DPWWd5Z9/strategy4.jpg">
+                                        <img src="https://i.ibb.co/DPWWd5Z9/strategy4.jpg" alt="أنشطة تعليمية تفاعلية">
                                         <div class="gallery-caption" id="galleryCaption2">أنشطة تعليمية تفاعلية لتحسين مستوى التحصيل الدراسي</div>
                                     </div>
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/bR1Cn1WZ/strategy6.jpg" alt="بيئة تعليمية نشطة" class="lazy" data-src="https://i.ibb.co/bR1Cn1WZ/strategy6.jpg">
+                                        <img src="https://i.ibb.co/bR1Cn1WZ/strategy6.jpg" alt="بيئة تعليمية نشطة">
                                         <div class="gallery-caption" id="galleryCaption3">إعداد بيئة تعليمية نشطة ومحفزة للطلاب</div>
                                     </div>
-                                    <!-- باقي الصور مع التعليق الجديد -->
+                                    <!-- باقي الصور بدون تعليقات -->
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/DyNDhNX/strategy1.jpg" alt="استراتيجية تعليمية تفاعلية" class="lazy" data-src="https://i.ibb.co/DyNDhNX/strategy1.jpg">
-                                        <div class="gallery-caption">تطبيق استراتيجيات تعليمية حديثة لتعزيز التفاعل داخل الصف.</div>
+                                        <img src="https://i.ibb.co/DyNDhNX/strategy1.jpg" alt="استراتيجية تعليمية تفاعلية">
                                     </div>
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/BK6XTNG0/strategy2.jpg" alt="التعلم التعاوني" class="lazy" data-src="https://i.ibb.co/BK6XTNG0/strategy2.jpg">
-                                        <div class="gallery-caption">تطبيق استراتيجيات تعليمية حديثة لتعزيز التفاعل داخل الصف.</div>
+                                        <img src="https://i.ibb.co/BK6XTNG0/strategy2.jpg" alt="التعلم التعاوني">
                                     </div>
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/LzbN9WYb/strategy3.jpg" alt="تقنيات تعليمية حديثة" class="lazy" data-src="https://i.ibb.co/LzbN9WYb/strategy3.jpg">
-                                        <div class="gallery-caption">تطبيق استراتيجيات تعليمية حديثة لتعزيز التفاعل داخل الصف.</div>
+                                        <img src="https://i.ibb.co/LzbN9WYb/strategy3.jpg" alt="تقنيات تعليمية حديثة">
                                     </div>
                                     <div class="gallery-item">
-                                        <img src="https://i.ibb.co/C3bhdCFt/strategy5.jpg" alt="مهارات التفكير والعمل" class="lazy" data-src="https://i.ibb.co/C3bhdCFt/strategy5.jpg">
-                                        <div class="gallery-caption">تطبيق استراتيجيات تعليمية حديثة لتعزيز التفاعل داخل الصف.</div>
+                                        <img src="https://i.ibb.co/C3bhdCFt/strategy5.jpg" alt="مهارات التفكير والعمل">
                                     </div>
                                 </div>
                                 
@@ -2019,11 +2050,14 @@
                     
                     <!-- مشروع عروض تقديمية -->
                     <div class="portfolio-item" data-category="presentations">
-                        <img src="https://via.placeholder.com/300x180/1A3A5F/FFFFFF?text=عروض+تقديمية" alt="عروض تقديمية" class="lazy" data-src="https://via.placeholder.com/300x180/1A3A5F/FFFFFF?text=عروض+تقديمية">
+                        <img src="https://i.ibb.co/QxN76QX/74297-DE5-6-FD2-4839-AC44-664-FDDA70903.png" alt="عروض تقديمية">
                         <div class="portfolio-content">
                             <h3 id="project3Title">عروض تقديمية تفاعلية</h3>
                             <p id="project3Desc">تصميم عروض تفاعلية جذابة للطلاب باستخدام أحدث الأدوات والتقنيات التعليمية. تتضمن هذه العروض أنشطة تفاعلية، ومقاطع فيديو تعليمية، وأسئلة تقييم فورية لضمان مشاركة فعالة من الطلاب.</p>
-                            <a href="https://visionof2030-pixel.github.io/English-quiz/" class="project-link" target="_blank"><span id="project3Link">عرض المشروع</span> <i class="fas fa-external-link-alt"></i></a>
+                            <div class="project-links">
+                                <a href="https://visionof2030-pixel.github.io/English-quiz/" class="project-link" target="_blank"><span id="project3Link1">المشروع الأول</span> <i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://ijassar36-cell.github.io/Test1/" class="project-link" target="_blank"><span id="project3Link2">المشروع الثاني</span> <i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
                     </div>
                     
@@ -2034,8 +2068,8 @@
                             <p id="participation1Desc">جانب من مشاركتي بصفتي عضوًا في لجنة التميز المدرسية، دعمًا للتفاعل مع المجتمع المهني، وتعزيزًا للتعاون وتبادل الخبرات مع الزملاء، والمشاركة في المبادرات التعليمية التطويرية.</p>
                             
                             <div class="participation-images">
-                                <img src="https://i.ibb.co/N6zvYFTm/participation1-1.jpg" alt="عضوية لجنة التميز والتفاعل المهني - صورة 1" class="participation-image lazy" data-src="https://i.ibb.co/N6zvYFTm/participation1-1.jpg">
-                                <img src="https://i.ibb.co/93SBfMCM/participation1-2.jpg" alt="عضوية لجنة التميز والتفاعل المهني - صورة 2" class="participation-image lazy" data-src="https://i.ibb.co/93SBfMCM/participation1-2.jpg">
+                                <img src="https://i.ibb.co/tpsJXVFc/IMG-20250921-WA0004.jpg" alt="عضوية لجنة التميز والتفاعل المهني - صورة 1" class="participation-image">
+                                <img src="https://i.ibb.co/9kxKvxYz/IMG-20250921-WA0005.jpg" alt="عضوية لجنة التميز والتفاعل المهني - صورة 2" class="participation-image">
                             </div>
                         </div>
                     </div>
@@ -2047,7 +2081,7 @@
                             <p id="participation2Desc">مشاركتي في فعاليات اليوم الوطني، تجسيدًا لقيم الانتماء والولاء للوطن، وتعزيزًا لدور المدرسة في غرس القيم الوطنية لدى الطلاب.</p>
                             
                             <div class="participation-images">
-                                <img src="https://i.ibb.co/x855CYrT/participation2.jpg" alt="تعزيز القيم الوطنية من خلال فعاليات اليوم الوطني" class="participation-image lazy" data-src="https://i.ibb.co/x855CYrT/participation2.jpg">
+                                <img src="https://i.ibb.co/SDTxLqxh/IMG-20250925-WA0098-1.jpg" alt="تعزيز القيم الوطنية من خلال فعاليات اليوم الوطني" class="participation-image">
                             </div>
                         </div>
                     </div>
@@ -2206,7 +2240,7 @@
                 visionItem3Desc: "أدمج التعلم القائم على المشاريع لتعزيز التفكير النقدي وحل المشكلات.",
                 visionItem4Title: "التعلم المستمر",
                 visionItem4Desc: "أؤمن بأن المعلم المتعلم باستمرار هو الأكثر قدرة على إلهام طلابه.",
-                achievementText: "في عام 2022 حصلتُ على ترقية إلى رتبة معلم متقدم بعد مسيرة مهنية امتدت لسنوات كمعلم ممارس، قدمت خلالها أداءً متميزًا أسهم في تطوير العملية التعليمية داخل المدرسة. جاءت هذه الترقية تقديرًا لجهودي في توظيف استراتيجيات تدريس حديثة تعزز مهارات التفكير النقدي والإبداعي لدى الطلاب، إضافة إلى قدرتي على تحليل نواتج التعلم وبناء خطط علاجية فردية أثمرت عن تحسين واضح في مستويات الطلاب.<br><br>وقد عكست هذه الترقية ثقة الجهة التعليمية بمهاراتي المهنية، خصوصًا في مجال تصميم أنشطة مبتكرة تُدمج مهارات الفهم العميق، والعمل التعاوني، والتعليم الذاتي داخل البيئة الصفية. كما كانت اعترافًا بدوري في تطوير البرامج التربوية والأنشطة التعليمية قبل عام 2022، ومساهمتي في بناء بيئة صفية محفزة يشعر فيها الطلاب بالأمان والرغبة في المشاركة والتعلم.<br><br>تعد هذه الترقية محطة مهمة في مسيرتي، لأنها لم تكن مجرد انتقال إلى مستوى وظيفي أعلى، بل كانت نتيجة تراكم خبرات وممارسات مهنية أثبتت أثرها على الطلاب وعلى منظومة التعليم داخل المدرسة. واليوم أواصل عملي كمعلم متقدم ملتزم بالتحسين المستمر، وتطبيق أفضل الممارسات التربوية، والمساهمة في رفع جودة التعليم وتحقيق نواتج تعلم أعلى.",
+                achievementText: "في عام 2021 حصلتُ على ترقية إلى رتبة معلم متقدم بعد مسيرة مهنية امتدت لسنوات كمعلم ممارس، قدمت خلالها أداءً متميزًا أسهم في تطوير العملية التعليمية داخل المدرسة. جاءت هذه الترقية تقديرًا لجهودي في توظيف استراتيجيات تدريس حديثة تعزز مهارات التفكير النقدي والإبداعي لدى الطلاب، إضافة إلى قدرتي على تحليل نواتج التعلم وبناء خطط علاجية فردية أثمرت عن تحسين واضح في مستويات الطلاب.<br><br>وقد عكست هذه الترقية ثقة الجهة التعليمية بمهاراتي المهنية، خصوصًا في مجال تصميم أنشطة مبتكرة تُدمج مهارات الفهم العميق، والعمل التعاوني، والتعليم الذاتي داخل البيئة الصفية. كما كانت اعترافًا بدوري في تطوير البرامج التربوية والأنشطة التعليمية قبل عام 2021، ومساهمتي في بناء بيئة صفية محفزة يشعر فيها الطلاب بالأمان والرغبة في المشاركة والتعلم.<br><br>تعد هذه الترقية محطة مهمة في مسيرتي، لأنها لم تكن مجرد انتقال إلى مستوى وظيفي أعلى، بل كانت نتيجة تراكم خبرات وممارسات مهنية أثبتت أثرها على الطلاب وعلى منظومة التعليم داخل المدرسة. واليوم أواصل عملي كمعلم متقدم ملتزم بالتحسين المستمر، وتطبيق أفضل الممارسات التربوية، والمساهمة في رفع جودة التعليم وتحقيق نواتج تعلم أعلى.",
                 techText: "أتمتع بشغف كبير تجاه التقنية والتعليم الرقمي، وأواكب أحدث التطورات في مجال الذكاء الاصطناعي وتطبيقاته التعليمية. أمتلك خبرة عملية في تصميم وتطوير أنشطة تفاعلية واختبارات إلكترونية باستخدام HTML وCSS وJavaScript، مما يثري تجربة التعلم ويجعلها أكثر تفاعلية وجاذبية للطلاب. أستخدم أدوات الذكاء الاصطناعي في تحليل أداء الطلاب وتصميم خطط تعليمية مخصصة، كما أصمم محتوى رقميًا مبتكرًا يتناسب مع احتياجات التعلم الحديثة. أسعى دائمًا لدمج التقنية في العملية التعليمية بطرق إبداعية تواكب متطلبات العصر الرقمي وتخدم أهداف رؤية المملكة 2030.",
                 footerText: "© 2024 جميع الحقوق محفوظة - فهد الخالدي",
                 // إضافة ترجمة نصوص الأيقونات
@@ -2239,7 +2273,8 @@
                 project2Desc1: "تُعدّ الاستراتيجيات الحديثة عنصرًا محوريًا في تطوير العملية التعليمية وتعزيز فاعلية التعلم داخل الصف؛ إذ تسهم في رفع مستوى التفاعل، وتحفيز الدافعية، وتنمية مهارات التفكير والعمل لدى الطلاب. ومن هذا المنطلق أحرص على توظيف مجموعة متنوعة من الأساليب التدريسية التي تجمع بين المتعة والفائدة، وتعتمد على التفاعل الإيجابي والمشاركة الفعّالة.<br><br>ويأتي التعلم القائم على التحفيز والتحدي كأحد الأساليب التي تسهم في ترسيخ المفاهيم بطريقة مشوقة، وتساعد الطلاب على التعلم بروح المنافسة الإيجابية. كما يمثل التعلم التعاوني ركيزة أساسية في بناء مهارات التواصل والعمل الجماعي، من خلال إتاحة الفرصة للطلاب لتبادل الآراء، ومناقشة الأفكار، وحل المشكلات بشكل جماعي. كذلك أحرص على توظيف التقنيات التعليمية الحديثة التي تسهم في عرض المحتوى بصورة جذابة، وتتيح تفاعل جميع الطلاب ومشاركتهم في تصحيح المفاهيم وبناء المعرفة بشكل مباشر.<br><br>وتعد هذه الممارسات نماذج من جملة من الاستراتيجيات التي أعمل على تنويعها داخل الحصة بما يراعي الفروق الفردية، ويحقق الأهداف التعليمية، ويهيئ بيئة تعليمية نشطة ومحفزة تسهم في تحسين مستوى التحصيل الدراسي وتعزيز مهارات القرن الحادي والعشرين.",
                 project3Title: "عروض تقديمية تفاعلية",
                 project3Desc: "تصميم عروض تفاعلية جذابة للطلاب باستخدام أحدث الأدوات والتقنيات التعليمية. تتضمن هذه العروض أنشطة تفاعلية، ومقاطع فيديو تعليمية، وأسئلة تقييم فورية لضمان مشاركة فعالة من الطلاب.",
-                project3Link: "عرض المشروع",
+                project3Link1: "المشروع الأول",
+                project3Link2: "المشروع الثاني",
                 // ترجمة التوصيات
                 testimonial1Text: "\"المعلم فهد يتميز بالإبداع والابتكار في أساليب التدريس، وقد قدم إضافة حقيقية لفريق العمل\"",
                 testimonial1Author: "مدير المدرسة",
@@ -2322,7 +2357,7 @@
                 visionItem3Desc: "I integrate project-based learning to enhance critical thinking and problem-solving.",
                 visionItem4Title: "Continuous Learning",
                 visionItem4Desc: "I believe that a continuously learning teacher is the most capable of inspiring his students.",
-                achievementText: "In 2022, I was promoted to the rank of Senior Teacher after a professional career spanning years as a practicing teacher, during which I provided outstanding performance that contributed to the development of the educational process within the school. This promotion came in recognition of my efforts in employing modern teaching strategies that enhance students' critical and creative thinking skills, in addition to my ability to analyze learning outcomes and build individual remedial plans that resulted in a clear improvement in student levels.<br><br>This promotion reflected the educational authority's confidence in my professional skills, especially in designing innovative activities that integrate deep understanding skills, collaborative work, and self-learning within the classroom environment. It was also an acknowledgment of my role in developing educational programs and activities before 2022, and my contribution to building a stimulating classroom environment where students feel safe and eager to participate and learn.<br><br>This promotion is an important milestone in my career, as it was not just a transition to a higher functional level, but rather the result of accumulated experiences and professional practices that proved their impact on students and the educational system within the school. Today, I continue my work as a senior teacher committed to continuous improvement, applying the best educational practices, and contributing to raising the quality of education and achieving higher learning outcomes.",
+                achievementText: "In 2021, I was promoted to the rank of Senior Teacher after a professional career spanning years as a practicing teacher, during which I provided outstanding performance that contributed to the development of the educational process within the school. This promotion came in recognition of my efforts in employing modern teaching strategies that enhance students' critical and creative thinking skills, in addition to my ability to analyze learning outcomes and build individual remedial plans that resulted in a clear improvement in student levels.<br><br>This promotion reflected the educational authority's confidence in my professional skills, especially in designing innovative activities that integrate deep understanding skills, collaborative work, and self-learning within the classroom environment. It was also an acknowledgment of my role in developing educational programs and activities before 2021, and my contribution to building a stimulating classroom environment where students feel safe and eager to participate and learn.<br><br>This promotion is an important milestone in my career, as it was not just a transition to a higher functional level, but rather the result of accumulated experiences and professional practices that proved their impact on students and the educational system within the school. Today, I continue my work as a senior teacher committed to continuous improvement, applying the best educational practices, and contributing to raising the quality of education and achieving higher learning outcomes.",
                 techText: "I have a great passion for technology and digital education, and I keep up with the latest developments in the field of artificial intelligence and its educational applications. I have practical experience in designing and developing interactive activities and electronic tests using HTML, CSS, and JavaScript, which enriches the learning experience and makes it more interactive and attractive for students. I use AI tools to analyze student performance and design customized educational plans, and I also design innovative digital content that suits modern learning needs. I always strive to integrate technology into the educational process in creative ways that keep pace with the requirements of the digital age and serve the goals of Saudi Vision 2030.",
                 footerText: "© 2024 All Rights Reserved - Fahad AlKhaldi",
                 // إضافة ترجمة نصوص الأيقونات
@@ -2355,7 +2390,8 @@
                 project2Desc1: "Modern strategies are a pivotal element in developing the educational process and enhancing the effectiveness of learning in the classroom. They contribute to raising the level of interaction, stimulating motivation, and developing thinking and working skills among students. From this standpoint, I am keen to employ a variety of teaching methods that combine fun and benefit, and rely on positive interaction and effective participation.<br><br>Challenge-based learning comes as one of the methods that helps consolidate concepts in an exciting way and helps students learn with a spirit of positive competition. Cooperative learning also represents a fundamental pillar in building communication and teamwork skills, by providing students with the opportunity to exchange opinions, discuss ideas, and solve problems collectively. I also strive to employ modern educational technologies that contribute to presenting content in an attractive way, and allow all students to interact and participate in correcting concepts and building knowledge directly.<br><br>These practices are examples of a range of strategies that I work to diversify within the class, taking into account individual differences, achieving educational goals, and preparing an active and stimulating educational environment that contributes to improving academic achievement and enhancing 21st century skills.",
                 project3Title: "Interactive Presentations",
                 project3Desc: "Designing interactive and engaging presentations for students using the latest educational tools and technologies. These presentations include interactive activities, educational videos, and instant assessment questions to ensure effective student participation.",
-                project3Link: "View Project",
+                project3Link1: "Project One",
+                project3Link2: "Project Two",
                 // ترجمة التوصيات
                 testimonial1Text: "\"Teacher Fahad is distinguished by creativity and innovation in teaching methods, and has made a real addition to the work team\"",
                 testimonial1Author: "School Principal",
@@ -2487,7 +2523,8 @@
         const project2Desc1 = document.getElementById('project2Desc1');
         const project3Title = document.getElementById('project3Title');
         const project3Desc = document.getElementById('project3Desc');
-        const project3Link = document.getElementById('project3Link');
+        const project3Link1 = document.getElementById('project3Link1');
+        const project3Link2 = document.getElementById('project3Link2');
 
         // عناصر التوصيات
         const testimonial1Text = document.getElementById('testimonial1Text');
@@ -2626,7 +2663,8 @@
             project2Desc1.innerHTML = t.project2Desc1;
             project3Title.textContent = t.project3Title;
             project3Desc.textContent = t.project3Desc;
-            project3Link.textContent = t.project3Link;
+            project3Link1.textContent = t.project3Link1;
+            project3Link2.textContent = t.project3Link2;
             
             // تحديث التوصيات
             testimonial1Text.textContent = t.testimonial1Text;
@@ -2770,36 +2808,6 @@
             const scrolled = (window.scrollY / windowHeight) * 100;
             scrollProgressBar.style.width = scrolled + '%';
         });
-
-        // Lazy Loading للصور
-        function initLazyLoading() {
-            const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
-            
-            if ('IntersectionObserver' in window) {
-                const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            const lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
-                            lazyImage.classList.remove('lazy');
-                            lazyImage.classList.add('loaded');
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
-                });
-                
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            } else {
-                // Fallback للمتصفحات التي لا تدعم IntersectionObserver
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImage.src = lazyImage.dataset.src;
-                    lazyImage.classList.remove('lazy');
-                    lazyImage.classList.add('loaded');
-                });
-            }
-        }
 
         // وظيفة إدارة معرض الصور
         function initGallery() {
@@ -2972,12 +2980,27 @@
             fadeElements.forEach(el => observer.observe(el));
         }
 
+        // تحسين تحميل الصور بشكل فوري
+        function preloadImages() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                // إزالة أي تأخير في تحميل الصور
+                if (img.complete) {
+                    img.style.opacity = '1';
+                } else {
+                    img.addEventListener('load', () => {
+                        img.style.opacity = '1';
+                    });
+                }
+            });
+        }
+
         // التحميل الأولي
         loadLanguage(currentLang);
         
         // تهيئة جميع المكونات عند تحميل الصفحة
         document.addEventListener('DOMContentLoaded', () => {
-            initLazyLoading();
+            preloadImages();
             initGallery();
             initPortfolioFilter();
             initTestimonialSlider();
