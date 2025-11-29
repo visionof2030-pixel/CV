@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -1437,6 +1437,8 @@
             object-fit: contain;
             background-color: #f9f9f9;
             padding: 10px;
+            /* إزالة خاصية lazy loading */
+            opacity: 1 !important;
         }
 
         .certificate-content {
@@ -1979,7 +1981,7 @@
                 <div class="portfolio-grid">
                     <!-- مشروع اختبار الرخصة المهنية التفاعلي -->
                     <div class="portfolio-item" data-category="interactive">
-                        <img src="https://i.ibb.co/h12KB7Gv/Professional-License-Exam.png" alt="اختبار الرخصة المهنية التفاعلي">
+                        <img src="https://i.ibb.co/FLsfsgbL/IMG-1829.jpg" alt="اختبار الرخصة المهنية التفاعلي">
                         <div class="portfolio-content">
                             <h3 id="project1Title">مشروع: اختبار الرخصة المهنية التفاعلي</h3>
                             <p id="project1Desc">مشروع تعليمي رقمي يهدف إلى محاكاة اختبار الرخصة المهنية للمعلمين، من خلال تقديم أسئلة تفاعلية مبنية على المعايير المعتمدة، مع تغذية راجعة فورية توضح السبب العلمي لكل إجابة صحيحة أو خاطئة، بما يسهم في رفع كفاءة المتدربين وتعزيز جاهزيتهم للاختبار الرسمي.</p>
