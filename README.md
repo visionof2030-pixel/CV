@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -451,6 +451,12 @@
         }
 
         .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* إزالة تأثيرات الظهور من قسم الدورات */
+        #training .fade-in-up {
             opacity: 1;
             transform: translateY(0);
         }
@@ -1812,7 +1818,7 @@
         <!-- Training Section -->
         <section id="training">
             <h2 class="section-title" id="trainingTitle">الدورات التدريبية</h2>
-            <div class="card fade-in-up">
+            <div class="card">
                 <!-- قسم التدريب التربوي -->
                 <div class="training-category">
                     <h3 class="training-category-title" id="trainingCategory1">تدريب تربوي</h3>
@@ -2987,11 +2993,16 @@
             const images = document.querySelectorAll('img');
             images.forEach(img => {
                 // إزالة أي تأخير في تحميل الصور
+                img.style.opacity = '1';
+                // إذا كانت الصورة قد تم تحميلها بالفعل، تأكد من إظهارها
                 if (img.complete) {
                     img.style.opacity = '1';
                 } else {
-                    img.addEventListener('load', () => {
-                        img.style.opacity = '1';
+                    img.addEventListener('load', function() {
+                        this.style.opacity = '1';
+                    });
+                    img.addEventListener('error', function() {
+                        console.error('Error loading image: ', this.src);
                     });
                 }
             });
